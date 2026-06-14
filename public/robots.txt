@@ -1,0 +1,53 @@
+# *
+User-agent: *
+Allow: /
+
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity-User
+User-agent: Perplexity-User
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-Web
+User-agent: Claude-Web
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# CCBot
+User-agent: CCBot
+Allow: /
+
+# Host
+Host: https://www.webnetic.com.au
+
+# Sitemaps
+Sitemap: https://www.webnetic.com.au/sitemap.xml
