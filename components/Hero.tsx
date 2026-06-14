@@ -24,14 +24,14 @@ export function Hero() {
             <Bolt size={13} /> Web + AI agency · Sydney
           </span>
 
-          <h1 className="mt-6 text-display-xl font-semibold text-ink [animation-delay:60ms] animate-fade-up">
+          <h1 className="mt-6 text-display-lg font-semibold text-ink [animation-delay:60ms] animate-fade-up">
             We build <span className="text-gradient">intelligent websites</span> that rank, convert,
             and run themselves.
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted [animation-delay:140ms] animate-fade-up">
-            Web development, SEO, AEO, GEO and AI automation for Sydney businesses — engineered for
-            speed, search and the AI answer engines your customers now ask.
+            Web development, SEO, AEO, GEO and AI automation for Sydney businesses. Engineered for
+            speed, search, and the AI answer engines your customers now ask.
           </p>
 
           {/* live terminal */}

@@ -29,12 +29,12 @@ export const SERVICES: Service[] = [
     titleTag: "Web Development Sydney | Fast, Custom Sites — Webnetic",
     metaDescription:
       "Custom WordPress and headless websites and web apps built for speed, Core Web Vitals and conversion. Sydney web development by Webnetic.",
-    tagline: "Fast custom sites and web apps — WordPress and headless.",
+    tagline: "Fast custom sites and web apps, on WordPress and headless.",
     valueProp:
       "We build WordPress and headless sites that load in under two seconds, score green on Core Web Vitals and turn visitors into enquiries. Every build is hand-coded for performance, accessibility and search from the first line.",
     included: [
-      { title: "Custom design & build", detail: "Bespoke, responsive front-ends — no recycled themes, no page-builder bloat." },
-      { title: "WordPress & headless", detail: "Classic WordPress, headless WordPress, or fully custom Next.js — matched to your needs." },
+      { title: "Custom design & build", detail: "Bespoke, responsive front-ends with no recycled themes or page-builder bloat." },
+      { title: "WordPress & headless", detail: "Classic WordPress, headless WordPress, or fully custom Next.js, matched to your needs." },
       { title: "Core Web Vitals tuning", detail: "Image optimisation, code-splitting and caching for green LCP, CLS and INP." },
       { title: "Accessibility (WCAG AA)", detail: "Semantic markup, keyboard support and contrast baked in, not bolted on." },
       { title: "Analytics & tracking", detail: "Privacy-respecting analytics and conversion events wired from day one." },
@@ -70,6 +70,14 @@ export const SERVICES: Service[] = [
         q: "Will I be able to edit the site myself?",
         a: "Yes. We hand over an editable CMS with documentation, so your team can update content, pages and media without writing code.",
       },
+      {
+        q: "How long does it take to build a website?",
+        a: "A focused marketing site typically takes three to six weeks; larger web apps take longer. We confirm a realistic timeline during discovery and keep you updated at each milestone.",
+      },
+      {
+        q: "Do you redesign or migrate existing websites?",
+        a: "Yes. We redesign dated sites and migrate between platforms, including moving to or from WordPress and headless setups, while preserving your SEO with proper redirects and a clean technical handover.",
+      },
     ],
     relatedServices: ["seo", "ai-integration", "ai-automation"],
     relatedProjects: ["one-life-tours-zakynthos", "sasa-grup"],
@@ -84,14 +92,14 @@ export const SERVICES: Service[] = [
       "Technical, on-page and content SEO that ranks Sydney businesses higher on Google. Audits, fixes and content built around real search intent.",
     tagline: "Technical, on-page and content SEO that ranks on Google.",
     valueProp:
-      "We help Sydney businesses rank on Google with technical SEO, on-page optimisation and content built around real search intent. No tricks — durable rankings from a fast, well-structured, genuinely useful site.",
+      "We help Sydney businesses rank on Google with technical SEO, on-page optimisation and content built around real search intent. No tricks, just durable rankings from a fast, well-structured, genuinely useful site.",
     included: [
       { title: "Technical SEO audit", detail: "Crawlability, indexation, site speed, structured data and architecture reviewed and fixed." },
       { title: "Keyword & intent research", detail: "We map the queries your customers actually search and the intent behind them." },
       { title: "On-page optimisation", detail: "Titles, meta, headings, internal links and content tuned per page." },
       { title: "Content strategy", detail: "Topic clusters that build topical authority and capture long-tail demand." },
       { title: "Core Web Vitals", detail: "Performance work that doubles as a direct ranking and UX win." },
-      { title: "Reporting", detail: "Clear monthly reporting on rankings, traffic and conversions — not vanity metrics." },
+      { title: "Reporting", detail: "Clear monthly reporting on rankings, traffic and conversions, not vanity metrics." },
     ],
     process: [
       { step: "Audit", detail: "We benchmark your current rankings, technical health and competitors." },
@@ -113,7 +121,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "What is the difference between technical and on-page SEO?",
-        a: "Technical SEO makes your site crawlable, fast and well-structured for search engines. On-page SEO optimises the content of each page — titles, headings, copy and internal links — for specific queries. You need both.",
+        a: "Technical SEO makes your site crawlable, fast and well-structured for search engines. On-page SEO optimises the content of each page, such as titles, headings, copy and internal links, for specific queries. You need both.",
       },
       {
         q: "Do you guarantee a number one ranking?",
@@ -121,7 +129,15 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Is SEO still worth it with AI search?",
-        a: "Yes. The same fundamentals — fast sites, clear structure and authoritative content — also feed AI answer engines. We extend classic SEO with AEO and GEO so you rank on Google and get cited in AI answers.",
+        a: "Yes. The same fundamentals of fast sites, clear structure and authoritative content also feed AI answer engines. We extend classic SEO with AEO and GEO so you rank on Google and get cited in AI answers.",
+      },
+      {
+        q: "How much do SEO services cost in Sydney?",
+        a: "Pricing depends on your starting point and goals, and whether you need a one-off audit or an ongoing programme. After reviewing your site and competitors we recommend a scope and quote it transparently, with no lock-in surprises.",
+      },
+      {
+        q: "Do you do local SEO for Sydney businesses?",
+        a: "Yes. We optimise for local intent with Google Business Profile setup, consistent name, address and contact details, local landing pages and LocalBusiness schema, so nearby customers find you first.",
       },
     ],
     relatedServices: ["aeo", "geo", "web-development"],
@@ -175,6 +191,14 @@ export const SERVICES: Service[] = [
         q: "What schema does AEO use?",
         a: "Most often FAQPage, Q&A, HowTo and Article schema. We choose and validate the markup that matches each page's content so it qualifies for rich results.",
       },
+      {
+        q: "How do you measure AEO success?",
+        a: "We track featured-snippet and 'people also ask' placements, impressions and click-through in Search Console, and whether voice assistants read your content. The goal is owning the answer, not just ranking a link.",
+      },
+      {
+        q: "Is AEO the same as GEO?",
+        a: "No. AEO targets answer features inside traditional search, such as snippets and voice results. GEO targets citations inside generative AI engines like ChatGPT and Perplexity. They overlap and we run them together, but they are distinct disciplines.",
+      },
     ],
     relatedServices: ["geo", "seo", "ai-integration"],
     relatedProjects: ["tech-trends-central"],
@@ -186,10 +210,10 @@ export const SERVICES: Service[] = [
     h1: "Generative Engine Optimization (GEO)",
     titleTag: "Generative Engine Optimization (GEO) Services — Webnetic",
     metaDescription:
-      "GEO gets your brand cited inside AI answers — Google AI Overviews, ChatGPT, Perplexity, Gemini and Claude. Generative Engine Optimization by Webnetic.",
-    tagline: "Get cited inside AI answers — ChatGPT, Perplexity, AI Overviews.",
+      "GEO gets your brand cited inside AI answers like Google AI Overviews, ChatGPT, Perplexity, Gemini and Claude. Generative Engine Optimization by Webnetic.",
+    tagline: "Get cited inside AI answers: ChatGPT, Perplexity, AI Overviews.",
     valueProp:
-      "Generative Engine Optimization gets your brand cited inside AI answers. As people ask ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews instead of searching, GEO makes sure the AI mentions and links you — not your competitor.",
+      "Generative Engine Optimization gets your brand cited inside AI answers. As people ask ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews instead of searching, GEO makes sure the AI mentions and links you, not your competitor.",
     included: [
       { title: "Entity & authority building", detail: "Consistent brand entity, clear facts and authoritative content models can trust." },
       { title: "Citation-ready content", detail: "Fact-dense, well-attributed writing AI engines can quote with confidence." },
@@ -213,7 +237,7 @@ export const SERVICES: Service[] = [
     faqs: [
       {
         q: "What is Generative Engine Optimization (GEO)?",
-        a: "GEO is the practice of optimising your content and brand so generative AI engines — like ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews — cite and recommend you in their answers. It focuses on entity clarity, authoritative fact-dense content and structured data engines can trust.",
+        a: "GEO is the practice of optimising your content and brand so generative AI engines like ChatGPT, Perplexity, Gemini, Claude and Google AI Overviews cite and recommend you in their answers. It focuses on entity clarity, authoritative fact-dense content and structured data engines can trust.",
       },
       {
         q: "How is GEO different from SEO?",
@@ -226,6 +250,14 @@ export const SERVICES: Service[] = [
       {
         q: "Can you control what AI says about my brand?",
         a: "You cannot directly control model output, but you strongly influence it. Clear, consistent, well-structured and authoritative information across your site and the wider web is what models learn from and cite. That is exactly what GEO builds.",
+      },
+      {
+        q: "How do you measure GEO results?",
+        a: "We run prompts across the major AI engines and track whether your brand is mentioned, how accurately it is described, and whether it is cited or linked. We benchmark before we start and report on changes over time.",
+      },
+      {
+        q: "How long does GEO take to work?",
+        a: "GEO compounds as engines re-crawl and models update. Entity and schema fixes can register within weeks, while citation authority builds over a few months of consistent, fact-dense publishing.",
       },
     ],
     relatedServices: ["aeo", "seo", "ai-integration"],
@@ -241,7 +273,7 @@ export const SERVICES: Service[] = [
       "Custom AI integration: chatbots, AI features, API integrations and bespoke tooling built into your website and product. Webnetic, Sydney.",
     tagline: "Chatbots, AI features, API integrations and custom tooling.",
     valueProp:
-      "We embed AI where it earns its place. From support chatbots and smart search to API integrations and custom internal tools, we build AI features that solve real problems — practical, reliable and measurable, not novelty.",
+      "We embed AI where it earns its place. From support chatbots and smart search to API integrations and custom internal tools, we build AI features that solve real problems. Practical, reliable and measurable, never novelty.",
     included: [
       { title: "AI chatbots & assistants", detail: "Support and sales assistants grounded in your content, not generic answers." },
       { title: "AI-powered features", detail: "Smart search, recommendations, summarisation and content generation in-product." },
@@ -318,7 +350,7 @@ export const SERVICES: Service[] = [
     faqs: [
       {
         q: "What can AI automation do for my business?",
-        a: "It removes repetitive manual work — content production, lead capture and follow-up, reporting, data entry and tool-to-tool data flow. The result is lower cost, fewer errors and time returned to your team for higher-value work.",
+        a: "It removes repetitive manual work, including content production, lead capture and follow-up, reporting, data entry and tool-to-tool data flow. The result is lower cost, fewer errors and time returned to your team for higher-value work.",
       },
       {
         q: "How much can AI automation cut content costs?",
@@ -326,7 +358,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Will automation replace my team?",
-        a: "No — it removes the tedious parts so your team focuses on judgement, strategy and relationships. We design human-in-the-loop checkpoints so people stay in control of anything that matters.",
+        a: "No. It removes the tedious parts so your team focuses on judgement, strategy and relationships. We design human-in-the-loop checkpoints so people stay in control of anything that matters.",
       },
       {
         q: "What tools do you automate with?",
@@ -343,10 +375,10 @@ export const SERVICES: Service[] = [
     h1: "Social Media Management in Sydney",
     titleTag: "Social Media Management Sydney | Content & Growth — Webnetic",
     metaDescription:
-      "Social media management for Sydney businesses: strategy, content, scheduling and growth — amplified by AI-assisted production. Webnetic.",
-    tagline: "Strategy, content, scheduling and growth — AI-amplified.",
+      "Social media management for Sydney businesses: strategy, content, scheduling and growth, amplified by AI-assisted production. Webnetic.",
+    tagline: "Strategy, content, scheduling and growth, AI-amplified.",
     valueProp:
-      "We run social media that compounds. Clear strategy, on-brand content and consistent scheduling — amplified by AI-assisted production so you post more, better, without burning your team out.",
+      "We run social media that compounds. Clear strategy, on-brand content and consistent scheduling, amplified by AI-assisted production so you post more, and post better, without burning your team out.",
     included: [
       { title: "Channel strategy", detail: "The right platforms, cadence and content pillars for your audience and goals." },
       { title: "Content creation", detail: "On-brand posts, captions and graphics produced with AI-assisted workflows." },
@@ -370,7 +402,7 @@ export const SERVICES: Service[] = [
     faqs: [
       {
         q: "Which social platforms do you manage?",
-        a: "We focus on the platforms where your audience actually is — commonly LinkedIn, Instagram, Facebook, X and TikTok. We recommend a focused set rather than spreading thin across every channel.",
+        a: "We focus on the platforms where your audience actually is, commonly LinkedIn, Instagram, Facebook, X and TikTok. We recommend a focused set rather than spreading thin across every channel.",
       },
       {
         q: "How does AI help with social media management?",

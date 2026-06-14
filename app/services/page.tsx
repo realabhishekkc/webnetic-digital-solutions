@@ -25,7 +25,7 @@ export default function ServicesHub() {
           as="h1"
           eyebrow="Services"
           title="One agency for web, search and AI"
-          intro="Webnetic brings web development, search optimisation and AI under one roof. Each service stands on its own — and together they form a system that helps Sydney businesses get found, win trust and grow."
+          intro="Webnetic brings web development, search optimisation and AI under one roof. Each service stands on its own, and together they form a system that helps Sydney businesses get found, win trust and grow."
         />
       </section>
 
@@ -57,7 +57,7 @@ export default function ServicesHub() {
         </div>
       </section>
 
-      <CTABand title="Not sure which service you need?" subtitle="Tell us your goal and we'll recommend the right mix — and only what genuinely moves the needle." />
+      <CTABand title="Not sure which service you need?" subtitle="Tell us your goal and we'll recommend the right mix, and only what genuinely moves the needle." />
     </>
   );
 }

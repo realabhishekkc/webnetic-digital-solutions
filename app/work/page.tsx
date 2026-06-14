@@ -22,7 +22,7 @@ export default function WorkPage() {
           as="h1"
           eyebrow="Work"
           title="Sites and systems we've shipped"
-          intro="A selection of real projects across tourism, local services, publishing and personal brands — each designed, built and, where it counts, automated by Webnetic."
+          intro="A selection of real projects across tourism, local services, publishing and personal brands, each designed, built and, where it counts, automated by Webnetic."
         />
       </section>
 

@@ -13,10 +13,10 @@ const DEFAULT_STEPS: Step[] = [
 export function ProcessTimeline({ steps = DEFAULT_STEPS }: { steps?: Step[] }) {
   return (
     <ol className="relative grid gap-8 md:grid-cols-4 md:gap-5">
-      {/* connecting line on desktop */}
+      {/* connecting line on desktop — inset between the first and last markers, symmetric fade */}
       <span
         aria-hidden
-        className="absolute left-0 top-6 hidden h-px w-full bg-gradient-to-r from-brand/50 via-brand/20 to-transparent md:block"
+        className="absolute left-[12.5%] right-[12.5%] top-6 hidden h-px bg-gradient-to-r from-transparent via-brand/35 to-transparent md:block"
       />
       {steps.map((s, i) => (
         <Reveal as="li" key={s.step} delay={i * 0.08} className="relative">

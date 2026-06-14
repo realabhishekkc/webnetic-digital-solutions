@@ -3,7 +3,7 @@ import "./globals.css";
 import { SITE } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { FloatingContact } from "@/components/FloatingContact";
+import { ChatWidget } from "@/components/ChatWidget";
 import { JsonLd } from "@/components/JsonLd";
 import { organizationSchema, websiteSchema, localBusinessSchema } from "@/lib/schema";
 
@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <FloatingContact />
+        <ChatWidget />
       </body>
     </html>
   );

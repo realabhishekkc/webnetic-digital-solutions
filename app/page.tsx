@@ -32,7 +32,7 @@ const DIFFERENTIATORS = [
   {
     icon: Bolt,
     title: "AI-native builds",
-    body: "AI is woven into how we build and what we ship — from automated content pipelines to in-product AI features, not bolted on as an afterthought.",
+    body: "AI is woven into how we build and what we ship, from automated content pipelines to in-product AI features, not bolted on as an afterthought.",
   },
   {
     icon: Search,
@@ -42,19 +42,19 @@ const DIFFERENTIATORS = [
   {
     icon: Flow,
     title: "Automation built in",
-    body: "We automate the repetitive work — content, leads and operations — so your site doesn't just sit there, it works for you.",
+    body: "We automate the repetitive work like content, leads and operations, so your site doesn't just sit there; it works for you.",
   },
   {
     icon: Pin,
     title: "Sydney-based, hands-on",
-    body: "A lean expert team based in Sydney. You work directly with the people building your project — no account-manager telephone game.",
+    body: "A lean expert team based in Sydney. You work directly with the people building your project, with no account-manager telephone game.",
   },
 ];
 
 const HOME_FAQS: FAQ[] = [
   {
     q: "What does Webnetic Digital Solutions do?",
-    a: "Webnetic is a Sydney digital agency that blends web development with AI. We build fast custom websites and web apps, and offer SEO, AEO, GEO, AI integration, AI automation and social media management — all engineered to rank, convert and run themselves.",
+    a: "Webnetic is a Sydney digital agency that blends web development with AI. We build fast custom websites and web apps, and offer SEO, AEO, GEO, AI integration, AI automation and social media management, all engineered to rank, convert and run themselves.",
   },
   {
     q: "Where is Webnetic based?",
@@ -72,6 +72,22 @@ const HOME_FAQS: FAQ[] = [
     q: "How fast are the websites you build?",
     a: "We target sub-two-second mobile loads and green Core Web Vitals, achieved through optimised images, code-splitting, caching and minimal third-party scripts.",
   },
+  {
+    q: "Do you work with businesses outside Sydney?",
+    a: "Yes. We are based in Sydney and work with clients across Australia and remotely worldwide. Our process runs smoothly over video calls and shared docs, so location is rarely a barrier.",
+  },
+  {
+    q: "How much does a project cost?",
+    a: "It depends on scope. A focused marketing site, a content-driven publication and a custom web app all differ. After a short discovery call we send a fixed, itemised quote, so you know the cost upfront with no surprises.",
+  },
+  {
+    q: "Which AI engines does GEO target?",
+    a: "Our Generative Engine Optimization targets the engines people now ask instead of searching: ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude. We make your brand the source these engines cite.",
+  },
+  {
+    q: "Do you offer ongoing support after launch?",
+    a: "Yes. Beyond launch we offer maintenance, performance monitoring, SEO and content programmes, and automation upkeep. You can engage us project-by-project or on a retainer.",
+  },
 ];
 
 export default function HomePage() {
@@ -84,7 +100,7 @@ export default function HomePage() {
       <section className="container-page mt-16">
         <Reveal className="surface-card flex flex-col gap-6 p-8 md:flex-row md:items-center md:justify-between">
           <p className="max-w-md text-lg leading-relaxed text-ink">
-            A modern agency where ideas become intelligent digital solutions — trusted by the
+            A modern agency where ideas become intelligent digital solutions, trusted by the
             businesses building what&apos;s next.
           </p>
           <ul className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-ink-muted">
@@ -104,7 +120,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="What we do"
             title="Seven services, one connected system"
-            intro="From the first line of code to the AI that runs your operations — each capability strengthens the others."
+            intro="From the first line of code to the AI that runs your operations, each capability strengthens the others."
           />
           <Link href="/services" className="btn-ghost shrink-0">
             All services <ArrowRight size={16} />
@@ -145,7 +161,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Why Webnetic"
           title="Built differently, on purpose"
-          intro="Most agencies do web or marketing or AI. We engineer all three into a single system designed around how people — and AI engines — actually find and choose businesses today."
+          intro="Most agencies do web or marketing or AI. We engineer all three into a single system designed around how people, and AI engines, actually find and choose businesses today."
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2">
           {DIFFERENTIATORS.map((d, i) => (
@@ -169,7 +185,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="FAQ"
           title="Questions, answered"
-          intro="The things people — and AI answer engines — most often ask about Webnetic."
+          intro="The things people, and AI answer engines, most often ask about Webnetic."
         />
         <div className="mt-10">
           <FAQAccordion faqs={HOME_FAQS} />

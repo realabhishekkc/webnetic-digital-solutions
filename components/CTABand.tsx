@@ -4,7 +4,7 @@ import { ArrowRight, BulbBrain } from "./icons";
 
 export function CTABand({
   title = "Ready to grow? Let's talk.",
-  subtitle = "Tell us what you're building. We'll reply within one business day with clear next steps — no pressure, no jargon.",
+  subtitle = "Tell us what you're building. We'll reply within one business day with clear next steps, no pressure and no jargon.",
 }: {
   title?: string;
   subtitle?: string;

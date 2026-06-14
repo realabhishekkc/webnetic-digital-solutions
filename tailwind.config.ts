@@ -11,28 +11,27 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          DEFAULT: "#070B14",
-          deep: "#070B14",
+          DEFAULT: "rgb(var(--bg) / <alpha-value>)",
         },
         surface: {
-          DEFAULT: "#0F1729",
-          raised: "#161F33",
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          raised: "rgb(var(--surface-raised) / <alpha-value>)",
         },
         brand: {
           // Primary accent — brand cyan from the logo
-          DEFAULT: "#38B6FF",
-          bright: "#7DD3FF",
-          deep: "#1E88E5",
+          DEFAULT: "rgb(var(--brand) / <alpha-value>)",
+          bright: "rgb(var(--brand-bright) / <alpha-value>)",
+          deep: "rgb(var(--brand-deep) / <alpha-value>)",
         },
         accent: {
           // Secondary accent — used sparingly, gradients only
           indigo: "#6366F1",
         },
         ink: {
-          DEFAULT: "#E6EDF5",
-          muted: "#8B95A7",
+          DEFAULT: "rgb(var(--ink) / <alpha-value>)",
+          muted: "rgb(var(--ink-muted) / <alpha-value>)",
         },
-        hairline: "rgba(255,255,255,0.08)",
+        hairline: "var(--hairline)",
       },
       fontFamily: {
         display: ["var(--font-display)", "Clash Display", "system-ui", "sans-serif"],

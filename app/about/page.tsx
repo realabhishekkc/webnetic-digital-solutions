@@ -16,9 +16,9 @@ export const metadata: Metadata = pageMeta({
 
 const VALUES = [
   { icon: Gauge, title: "Performance is a feature", body: "Speed is not a nice-to-have. Fast sites rank better, convert better and respect people's time. We treat Core Web Vitals as a requirement, not a report card." },
-  { icon: Spark, title: "Intelligence, applied", body: "We use AI where it genuinely helps — building faster, automating the repetitive, and adding real capability — never as a gimmick." },
+  { icon: Spark, title: "Intelligence, applied", body: "We use AI where it genuinely helps: building faster, automating the repetitive, and adding real capability. Never as a gimmick." },
   { icon: Shield, title: "Craft over shortcuts", body: "Hand-built, semantic, accessible code. No recycled themes, no bloat, no dark patterns. Work we're proud to put our name on." },
-  { icon: Bolt, title: "Outcomes over output", body: "We measure success by what changes for you — rankings, enquiries, hours saved — not by the length of a deliverables list." },
+  { icon: Bolt, title: "Outcomes over output", body: "We measure success by what changes for you, such as rankings, enquiries and hours saved, not by the length of a deliverables list." },
 ];
 
 const CAPABILITIES = [
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </p>
             <p>
               We do it differently. We build the website, engineer it to rank on Google and to be
-              cited by AI answer engines, and automate the work behind it — as one connected system.
+              cited by AI answer engines, and automate the work behind it, as one connected system.
               That combination of web development, IT and AI automation is what lets a small site
               punch far above its weight.
             </p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="The team"
           title="Senior expertise across web, IT and AI"
-          intro="Webnetic is led by a founder with a background spanning web development, IT and AI automation — the same blend of skills the agency is built on. Rather than invent a roster of staff, we keep the team lean and senior, and bring in trusted specialists when a project calls for it."
+          intro="Webnetic is led by a founder with a background spanning web development, IT and AI automation, the same blend of skills the agency is built on. Rather than invent a roster of staff, we keep the team lean and senior, and bring in trusted specialists when a project calls for it."
         />
       </section>
 
