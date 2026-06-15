@@ -36,6 +36,8 @@ module.exports = {
       priority = 0.9;
     } else if (path.startsWith("/services/")) {
       priority = 0.85;
+    } else if (path === "/locations" || path.startsWith("/locations/")) {
+      priority = 0.85;
     } else if (path.startsWith("/blog")) {
       priority = 0.6;
       changefreq = "monthly";

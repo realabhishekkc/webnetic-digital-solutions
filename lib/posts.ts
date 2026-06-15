@@ -677,6 +677,7 @@ export const POSTS: Post[] = [
             items: [
               { label: "Web development services", href: "/services/web-development" },
               { label: "SEO services", href: "/services/seo" },
+              { label: "Web design in Parramatta", href: "/locations/parramatta" },
               { label: "Start a project", href: "/contact" },
               { label: "Web design in Granville", href: "/blog/web-design-granville" },
             ],
@@ -758,6 +759,7 @@ export const POSTS: Post[] = [
             items: [
               { label: "Web development services", href: "/services/web-development" },
               { label: "Local SEO", href: "/services/seo" },
+              { label: "Web design in Auburn", href: "/locations/auburn" },
               { label: "Get a quote", href: "/contact" },
               { label: "Web design in Granville", href: "/blog/web-design-granville" },
             ],
@@ -835,6 +837,7 @@ export const POSTS: Post[] = [
             items: [
               { label: "Web development services", href: "/services/web-development" },
               { label: "SEO services", href: "/services/seo" },
+              { label: "Web design in Ashfield", href: "/locations/ashfield" },
               { label: "Start a project", href: "/contact" },
               { label: "Choosing a web design agency near you", href: "/blog/web-design-agency-near-me" },
             ],
@@ -912,6 +915,7 @@ export const POSTS: Post[] = [
             items: [
               { label: "Web development services", href: "/services/web-development" },
               { label: "Local SEO", href: "/services/seo" },
+              { label: "Web design in Granville", href: "/locations/granville" },
               { label: "Get a quote", href: "/contact" },
               { label: "Web design agency in Parramatta", href: "/blog/web-design-agency-parramatta" },
             ],

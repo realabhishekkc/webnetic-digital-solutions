@@ -85,6 +85,23 @@ export const serviceSchema = (s: {
   areaServed: { "@type": "City", name: "Sydney" },
 });
 
+// Localised service for suburb landing pages — areaServed set to the suburb (local SEO).
+export const localServiceSchema = (loc: {
+  name: string;
+  slug: string;
+  postcode: string;
+  region: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: `Web Design & Development in ${loc.name}`,
+  serviceType: "Web design and development",
+  description: `Fast, SEO-ready websites, AI and automation for businesses in ${loc.name} (${loc.postcode}), ${loc.region}, by Webnetic Digital Solutions.`,
+  url: `${SITE.url}/locations/${loc.slug}`,
+  provider: { "@id": `${SITE.url}/#organization` },
+  areaServed: { "@type": "City", name: `${loc.name}, ${SITE.region}` },
+});
+
 export const faqSchema = (faqs: FAQ[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",

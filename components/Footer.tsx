@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SITE, SOCIALS, mailtoQuote } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { PROJECTS } from "@/lib/projects";
+import { LOCATIONS } from "@/lib/locations";
 import { BulbBrain, LinkedIn, XLogo, GitHub, Mail, Pin } from "./icons";
 
 const socialIcon = (label: string) =>
@@ -86,6 +87,25 @@ export function Footer() {
             </li>
           ))}
         </FooterCol>
+      </div>
+
+      {/* Areas we serve — local internal linking */}
+      <div className="border-t border-hairline">
+        <div className="container-page flex flex-col gap-2 py-5 text-sm sm:flex-row sm:items-center">
+          <span className="font-medium text-ink">Areas we serve:</span>
+          <ul className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            {LOCATIONS.map((l) => (
+              <li key={l.slug}>
+                <Link href={`/locations/${l.slug}`} className="link-muted">
+                  {l.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/locations" className="text-brand-bright">All locations</Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="border-t border-hairline">
