@@ -9,7 +9,8 @@ export type Project = {
   what: string; // what it is
   did: string; // what was done
   tags: string[];
-  accent: string; // gradient pair for the card visual
+  accent: string; // gradient pair used as image fallback / overlay tint
+  image: string; // screenshot in /public/projects
 };
 
 export const PROJECTS: Project[] = [
@@ -23,6 +24,7 @@ export const PROJECTS: Project[] = [
     did: "Designed and built an enquiry-driven website that showcases experiences and turns visitors into booking enquiries, optimised for speed and discovery.",
     tags: ["Web Development", "SEO", "Conversion"],
     accent: "from-[#1E88E5] to-[#38B6FF]",
+    image: "/projects/one-life-tours-zakynthos.jpg",
   },
   {
     slug: "abhishek-kc-portfolio",
@@ -34,6 +36,7 @@ export const PROJECTS: Project[] = [
     did: "Built a fast, refined personal brand site with clean typography, considered motion and strong on-page SEO.",
     tags: ["Web Development", "Personal Brand"],
     accent: "from-[#38B6FF] to-[#7DD3FF]",
+    image: "/projects/abhishek-kc-portfolio.jpg",
   },
   {
     slug: "hashifyai",
@@ -45,6 +48,7 @@ export const PROJECTS: Project[] = [
     did: "Created a sharp single-purpose landing experience designed to communicate value and capture serious purchase enquiries.",
     tags: ["Landing Page", "Branding"],
     accent: "from-[#6366F1] to-[#38B6FF]",
+    image: "/projects/hashifyai.jpg",
   },
   {
     slug: "tech-trends-central",
@@ -56,6 +60,7 @@ export const PROJECTS: Project[] = [
     did: "Engineered an AI content pipeline and a search-first publishing site that produces and ranks tech-news content at scale with editorial quality control.",
     tags: ["AI Automation", "SEO", "Web Development"],
     accent: "from-[#1E88E5] to-[#7DD3FF]",
+    image: "/projects/tech-trends-central.jpg",
   },
   {
     slug: "sasa-grup",
@@ -67,6 +72,7 @@ export const PROJECTS: Project[] = [
     did: "Built a clear, conversion-focused local services website with strong local SEO so nearby customers find and contact the business.",
     tags: ["Web Development", "Local SEO"],
     accent: "from-[#38B6FF] to-[#6366F1]",
+    image: "/projects/sasa-grup.jpg",
   },
 ];
 

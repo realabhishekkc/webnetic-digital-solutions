@@ -36,6 +36,18 @@ npm install --no-save sharp png-to-ico
 node scripts/gen-assets.mjs
 ```
 
+### Refreshing project screenshots
+
+The `/work` cards use real screenshots of each live site, stored in `public/projects/`.
+To recapture them (e.g. after a project site changes):
+
+```bash
+npm install --no-save playwright && npx playwright install chromium
+node scripts/shots-projects.mjs
+```
+
+Edit the site list and paths in `scripts/shots-projects.mjs` and `lib/projects.ts`.
+
 ## Project structure
 
 ```
@@ -63,7 +75,7 @@ All copy and data live in `lib/` — no need to touch components for routine upd
 | --- | --- |
 | Brand name, email, location, nav, socials | `lib/site.ts` |
 | The 7 service pages (copy, deliverables, FAQs, links) | `lib/services.ts` |
-| Portfolio projects shown on `/work` | `lib/projects.ts` |
+| Portfolio projects shown on `/work` (incl. screenshot path) | `lib/projects.ts` |
 | Blog articles (sections render automatically, incl. table of contents) | `lib/posts.ts` |
 | Per-page metadata helper (title/description/OG/canonical) | `lib/seo.ts` |
 | JSON-LD structured-data builders | `lib/schema.ts` |
