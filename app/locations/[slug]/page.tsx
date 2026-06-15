@@ -41,7 +41,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
   if (!loc) notFound();
 
   const post = loc.blogSlug ? getPost(loc.blogSlug) : null;
-  const others = LOCATIONS.filter((l) => l.slug !== loc.slug);
+  const others = LOCATIONS.filter((l) => l.slug !== loc.slug).slice(0, 6);
 
   return (
     <>
@@ -202,6 +202,9 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 </Link>
               ))}
             </div>
+            <Link href="/locations" className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-bright">
+              View all areas we serve <ArrowRight size={15} />
+            </Link>
           </div>
         </div>
       </section>

@@ -94,7 +94,7 @@ export function Footer() {
         <div className="container-page flex flex-col gap-2 py-5 text-sm sm:flex-row sm:items-center">
           <span className="font-medium text-ink">Areas we serve:</span>
           <ul className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            {LOCATIONS.map((l) => (
+            {LOCATIONS.slice(0, 8).map((l) => (
               <li key={l.slug}>
                 <Link href={`/locations/${l.slug}`} className="link-muted">
                   {l.name}
