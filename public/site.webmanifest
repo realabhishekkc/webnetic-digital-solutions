@@ -1,0 +1,14 @@
+{
+  "name": "Webnetic Digital Solutions",
+  "short_name": "Webnetic",
+  "description": "Sydney digital agency blending web craft with AI — web, SEO, AEO, GEO, AI integration and automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070B14",
+  "theme_color": "#070B14",
+  "icons": [
+    { "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/android-chrome-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/android-chrome-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
