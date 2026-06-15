@@ -6,9 +6,10 @@ import { pageMeta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTABand } from "@/components/CTABand";
+import { FAQAccordion } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
-import { articleSchema } from "@/lib/schema";
-import { BulbBrain, Clock, ArrowRight, LinkedIn, XLogo } from "@/components/icons";
+import { articleSchema, faqSchema } from "@/lib/schema";
+import { BulbBrain, Clock, ArrowRight, ArrowUpRight, LinkedIn, XLogo } from "@/components/icons";
 
 export function generateStaticParams() {
   return postSlugs.map((slug) => ({ slug }));
@@ -54,6 +55,22 @@ function BlockRenderer({ block }: { block: Block }) {
           {block.text}
         </blockquote>
       );
+    case "links":
+      return (
+        <ul className="my-2 grid gap-2 sm:grid-cols-2">
+          {block.items.map((l, i) => (
+            <li key={i}>
+              <Link
+                href={l.href}
+                className="group flex items-center justify-between gap-3 rounded-xl border border-hairline bg-surface px-4 py-3 text-sm font-medium !text-ink no-underline transition-colors hover:border-brand/40"
+              >
+                {l.label}
+                <ArrowUpRight size={16} className="text-brand transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      );
     case "table":
       return (
         <div className="my-6 overflow-x-auto rounded-xl border border-hairline">
@@ -93,7 +110,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <JsonLd data={articleSchema(post)} />
+      <JsonLd data={post.faqs?.length ? [articleSchema(post), faqSchema(post.faqs)] : articleSchema(post)} />
       <Breadcrumbs
         items={[
           { name: "Blog", path: "/blog" },
@@ -186,6 +203,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </article>
+
+      {/* FAQ (AEO) */}
+      {post.faqs?.length ? (
+        <section className="container-page mt-24">
+          <div className="mx-auto max-w-prose">
+            <h2 className="font-display text-display-sm font-semibold text-ink">Frequently asked questions</h2>
+            <div className="mt-8">
+              <FAQAccordion faqs={post.faqs} />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Related posts */}
       <section className="container-page mt-24">
