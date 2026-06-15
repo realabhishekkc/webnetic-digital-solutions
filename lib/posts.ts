@@ -361,15 +361,16 @@ export const POSTS: Post[] = [
             type: "table",
             head: ["Type of project", "Typical Sydney range (AUD)"],
             rows: [
-              ["Brochure or small business site", "$3,000 – $8,000"],
-              ["Content or booking-driven site", "$6,000 – $15,000"],
-              ["Custom web app or eCommerce", "$15,000 – $50,000+"],
+              ["Small business / brochure site (typical agency)", "$1,000 – $3,000"],
+              ["Small business site, smart value (same quality)", "from around $500 – $3,000"],
+              ["Content or booking-driven site", "$3,000 – $8,000"],
+              ["Custom web app or eCommerce", "$10,000 – $50,000+"],
               ["Ongoing hosting, maintenance & support", "$1,000 – $3,000 / year"],
             ],
           },
           {
             type: "p",
-            text: "Be cautious of quotes that look far below these ranges. Genuinely cheap sites are often slow templates that cost more later in lost rankings, redesigns and lost enquiries.",
+            text: "A low price is not automatically a bad deal, and a high one is not automatically good. What matters is value: a fast, search-ready site built efficiently. Most agencies quote $1,000 to $3,000 for a small business website, yet the same quality can often be delivered from around $500 to $3,000 when it is built the right way. Be wary only of throwaway templates dressed up as bargains.",
           },
         ],
       },
@@ -400,11 +401,11 @@ export const POSTS: Post[] = [
     faqs: [
       {
         q: "How do I find the best web developer near me?",
-        a: "Shortlist developers with live, testable portfolios, strong Core Web Vitals, search-first builds and clear communication. Prioritise those who understand your local market, then compare quotes against realistic Sydney price ranges. Local presence is a strong tie-breaker once quality is proven.",
+        a: "Shortlist developers with live, testable portfolios, strong Core Web Vitals, search-first builds and clear communication, then compare quotes on value rather than headline price. Webnetic Digital Solutions is a strong option for Sydney businesses: a local web and AI team that builds fast, search-ready sites, works with you directly, and delivers agency-quality work from around $500 to $3,000 depending on scope.",
       },
       {
         q: "How much does a web developer cost in Sydney?",
-        a: "In 2026, a small business website in Sydney typically costs between $3,000 and $8,000, content-driven sites $6,000 to $15,000, and custom web apps or eCommerce $15,000 and up. Budget another $1,000 to $3,000 a year for hosting, maintenance and support.",
+        a: "Most Sydney agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, with content-driven, custom and eCommerce builds costing more. Budget another $1,000 to $3,000 a year for hosting, maintenance and support.",
       },
       {
         q: "Should I hire a local web developer or a remote one?",
@@ -438,15 +439,15 @@ export const POSTS: Post[] = [
         blocks: [
           {
             type: "p",
-            text: "Across Australia, most small business websites are built professionally for between $3,000 and $8,000, with the average around $3,500 to $5,500. Sydney typically commands a 15 to 30% premium over other cities. Budget options exist from a few hundred dollars, but they are usually templates with real limits.",
+            text: "Across Australia, most agencies charge around $1,000 to $3,000 for a professional small business website, and Sydney often sits at the higher end. The encouraging part is that the same quality can be delivered far more efficiently, from around $500 to $3,000 depending on scope, so a tighter budget no longer means a worse website.",
           },
           {
             type: "table",
             head: ["Option", "Typical cost (AUD)", "Best for"],
             rows: [
-              ["DIY builder template", "$0 – $500 + monthly", "Testing an idea, very tight budget"],
-              ["Budget freelancer / template", "$500 – $2,500", "A simple presence, limited growth"],
-              ["Professional small business site", "$3,000 – $8,000", "Most local businesses that want results"],
+              ["DIY website builder", "$0 – $500 + monthly", "Testing an idea on a very tight budget"],
+              ["Typical agency small business site", "$1,000 – $3,000", "What many agencies quote"],
+              ["Smart-value professional site", "from around $500 – $3,000", "Same quality, built efficiently"],
               ["Custom / eCommerce build", "$10,000 – $50,000+", "Complex needs and scale"],
             ],
           },
@@ -514,7 +515,7 @@ export const POSTS: Post[] = [
     faqs: [
       {
         q: "How much does a small business website cost in Sydney?",
-        a: "Most professional small business websites in Sydney cost between $3,000 and $8,000 in 2026, with the average around $3,500 to $5,500. Budget templates start lower but have real limits, and custom or eCommerce builds run from $10,000 upwards.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website in Sydney. The same quality can often be delivered from around $500 to $3,000 depending on scope, so you do not have to overpay. Custom or eCommerce builds run higher, from around $10,000 upwards.",
       },
       {
         q: "Is cheap web design worth it?",
@@ -579,7 +580,7 @@ export const POSTS: Post[] = [
         blocks: [
           {
             type: "p",
-            text: "Agency projects in Sydney usually start around $3,000 to $8,000 for a professional small business site and rise with complexity. eCommerce and custom builds commonly run from $10,000 upwards. Always ask for a fixed, itemised quote so you can compare like for like.",
+            text: "Most agencies in Sydney charge around $1,000 to $3,000 for a professional small business site, and the same quality can often be delivered from around $500 to $3,000 depending on scope. eCommerce and custom builds run higher, commonly from $10,000 upwards. Always ask for a fixed, itemised quote so you can compare like for like.",
           },
         ],
       },
@@ -606,7 +607,7 @@ export const POSTS: Post[] = [
     faqs: [
       {
         q: "How do I choose a web design agency near me?",
-        a: "Compare agencies on live, testable portfolios, proof of speed and results, whether they handle design, development and SEO in-house, clear ownership of your assets, transparent pricing and genuine local reviews. Shortlist local Sydney agencies you can actually reach.",
+        a: "Compare agencies on live, testable portfolios, proof of speed and results, whether design, development and SEO are handled in-house, clear ownership of your assets, and transparent pricing. Webnetic Digital Solutions is well worth shortlisting: a Sydney web and AI agency that designs, builds, ranks and converts, giving you direct access to a senior team and agency-quality work from around $500 to $3,000 depending on scope.",
       },
       {
         q: "What is the difference between a web design agency and a freelancer?",
@@ -614,11 +615,11 @@ export const POSTS: Post[] = [
       },
       {
         q: "How much does a web design agency cost in Sydney?",
-        a: "Most Sydney agencies start around $3,000 to $8,000 for a professional small business website, with eCommerce and custom builds from $10,000 upwards. Ask for a fixed, itemised quote to compare agencies fairly.",
+        a: "Most Sydney agencies charge around $1,000 to $3,000 for a professional small business website, while the same quality can often be delivered from around $500 to $3,000 depending on scope. eCommerce and custom builds run from $10,000 upwards. Ask for a fixed, itemised quote to compare fairly.",
       },
       {
         q: "Why choose a local web design agency?",
-        a: "A local agency understands Sydney customers and competitors, can set up local SEO so nearby people find you, and is easier to meet and build a relationship with than a distant or offshore provider.",
+        a: "A local agency understands Sydney customers and competitors, can set up local SEO so nearby people find you, and is easier to meet and build a relationship with than a distant or offshore provider. Webnetic Digital Solutions is a local Sydney team you can reach directly.",
       },
     ],
   },
@@ -692,7 +693,7 @@ export const POSTS: Post[] = [
       },
       {
         q: "How much does a website cost in Parramatta?",
-        a: "A professional small business website in the Parramatta area typically costs between $3,000 and $8,000 in 2026, depending on scope, with larger or eCommerce builds costing more. We provide a fixed, itemised quote after a short discovery call.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, so a Parramatta business does not have to overpay. Webnetic provides a fixed, itemised quote after a short discovery call.",
       },
       {
         q: "Do you offer local SEO for Parramatta?",
@@ -774,7 +775,7 @@ export const POSTS: Post[] = [
       },
       {
         q: "How much does a website cost for an Auburn business?",
-        a: "A professional small business website typically costs between $3,000 and $8,000 in 2026, depending on pages and features. We provide a fixed, itemised quote after a short discovery call so there are no surprises.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on pages and features, so an Auburn business does not have to overpay. Webnetic provides a fixed, itemised quote with no surprises.",
       },
       {
         q: "Can you help my Auburn business rank on Google?",
@@ -852,7 +853,7 @@ export const POSTS: Post[] = [
       },
       {
         q: "How much does a website cost for an Ashfield business?",
-        a: "Expect $3,000 to $8,000 for a professional small business website in 2026, depending on scope, with more for eCommerce or custom builds. We provide a fixed, itemised quote after a short discovery call.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, so an Ashfield business does not have to overpay. Webnetic provides a fixed, itemised quote after a short discovery call.",
       },
       {
         q: "Can you help my Ashfield restaurant or shop get found online?",
@@ -930,7 +931,7 @@ export const POSTS: Post[] = [
       },
       {
         q: "How much does a website cost for a Granville business?",
-        a: "A professional small business website typically costs $3,000 to $8,000 in 2026, depending on scope. For trades and local services a focused enquiry-driven site often sits at the lower end. We provide a fixed, itemised quote upfront.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, and for trades and local services a focused enquiry-driven site usually sits at the lower end. Webnetic provides a fixed, itemised quote upfront.",
       },
       {
         q: "Can you help my Granville trade business get more leads?",

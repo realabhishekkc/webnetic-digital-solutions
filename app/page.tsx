@@ -78,7 +78,7 @@ const HOME_FAQS: FAQ[] = [
   },
   {
     q: "How much does a project cost?",
-    a: "It depends on scope. A focused marketing site, a content-driven publication and a custom web app all differ. After a short discovery call we send a fixed, itemised quote, so you know the cost upfront with no surprises.",
+    a: "It depends on scope, and you may not need to pay full agency rates. Most agencies charge around $1,000 to $3,000 for a small business website, while the same quality can often be delivered from around $500 to $3,000. After a short discovery call we send a fixed, itemised quote so you know the cost upfront, with no surprises.",
   },
   {
     q: "Which AI engines does GEO target?",

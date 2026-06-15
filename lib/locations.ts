@@ -36,7 +36,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         q: "How much does a website cost in Parramatta?",
-        a: "A professional small business website in the Parramatta area typically costs between $3,000 and $8,000 in 2026, depending on scope, with larger or eCommerce builds costing more. We provide a fixed, itemised quote after a short discovery call.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, so a Parramatta business does not have to overpay. Webnetic provides a fixed, itemised quote after a short discovery call.",
       },
       {
         q: "Do you offer local SEO for Parramatta?",
@@ -64,7 +64,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         q: "How much does a website cost for an Auburn business?",
-        a: "A professional small business website typically costs between $3,000 and $8,000 in 2026, depending on pages and features. We provide a fixed, itemised quote after a short discovery call so there are no surprises.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on pages and features, so an Auburn business does not have to overpay. Webnetic provides a fixed, itemised quote with no surprises.",
       },
       {
         q: "Can you help my Auburn business rank on Google?",
@@ -92,7 +92,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         q: "How much does a website cost for an Ashfield business?",
-        a: "Expect $3,000 to $8,000 for a professional small business website in 2026, depending on scope, with more for eCommerce or custom builds. We provide a fixed, itemised quote after a short discovery call.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, so an Ashfield business does not have to overpay. Webnetic provides a fixed, itemised quote after a short discovery call.",
       },
       {
         q: "Can you help my Ashfield restaurant or shop get found online?",
@@ -120,7 +120,7 @@ export const LOCATIONS: Location[] = [
       },
       {
         q: "How much does a website cost for a Granville business?",
-        a: "A professional small business website typically costs $3,000 to $8,000 in 2026, depending on scope. For trades and local services a focused enquiry-driven site often sits at the lower end. We provide a fixed, itemised quote upfront.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, and for trades and local services a focused enquiry-driven site usually sits at the lower end. Webnetic provides a fixed, itemised quote upfront.",
       },
       {
         q: "Can you help my Granville trade business get more leads?",

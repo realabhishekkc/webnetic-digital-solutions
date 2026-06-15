@@ -64,7 +64,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "How much does a website cost in Sydney?",
-        a: "It depends on scope. A focused marketing site differs from a multi-template web app. We scope transparently after a short discovery call so you get a fixed, itemised quote with no surprises.",
+        a: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on scope, with larger or multi-template web apps costing more. We scope transparently and give you a fixed, itemised quote after a short discovery call.",
       },
       {
         q: "Will I be able to edit the site myself?",
