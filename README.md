@@ -48,6 +48,17 @@ node scripts/shots-projects.mjs
 
 Edit the site list and paths in `scripts/shots-projects.mjs` and `lib/projects.ts`.
 
+### Blog featured images
+
+Each blog post has an on-brand featured image at `public/blog/<slug>.jpg`, generated
+from the post's title and category. After adding a post, add it to the list in
+`scripts/gen-blog-images.mjs` and regenerate:
+
+```bash
+npm install --no-save sharp
+node scripts/gen-blog-images.mjs
+```
+
 ## Project structure
 
 ```

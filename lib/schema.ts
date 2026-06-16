@@ -131,7 +131,7 @@ export const articleSchema = (post: Post) => ({
   datePublished: post.date,
   dateModified: post.updated || post.date,
   inLanguage: "en-AU",
-  image: OG,
+  image: `${SITE.url}/blog/${post.slug}.jpg`,
   url: `${SITE.url}/blog/${post.slug}`,
   mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.url}/blog/${post.slug}` },
   author: { "@type": "Organization", name: post.author, url: SITE.url },

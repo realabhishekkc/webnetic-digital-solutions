@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { POSTS, getPost, postSlugs, type Block } from "@/lib/posts";
@@ -9,7 +10,7 @@ import { CTABand } from "@/components/CTABand";
 import { FAQAccordion } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { articleSchema, faqSchema } from "@/lib/schema";
-import { BulbBrain, Clock, ArrowRight, ArrowUpRight, LinkedIn, XLogo } from "@/components/icons";
+import { Clock, ArrowRight, ArrowUpRight, LinkedIn, XLogo } from "@/components/icons";
 
 export function generateStaticParams() {
   return postSlugs.map((slug) => ({ slug }));
@@ -25,6 +26,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     ogTitle: post.title,
     type: "article",
     publishedTime: post.date,
+    image: `/blog/${post.slug}.jpg`,
   });
 }
 
@@ -134,14 +136,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <p className="mt-5 text-sm text-ink-muted">By {post.author}</p>
         </header>
 
-        {/* hero image (illustrative gradient with brand motif — descriptive alt) */}
-        <div
-          role="img"
-          aria-label={post.heroAlt}
-          className="relative mx-auto mt-10 flex h-56 max-w-4xl items-center justify-center overflow-hidden rounded-3xl border border-hairline bg-gradient-to-br from-[#0F1729] via-[#101a30] to-[#161F33] sm:h-72"
-        >
-          <div className="absolute inset-0 grid-backdrop opacity-40" />
-          <BulbBrain size={96} className="opacity-40" />
+        {/* featured image */}
+        <div className="relative mx-auto mt-10 aspect-[16/9] max-w-4xl overflow-hidden rounded-3xl border border-hairline">
+          <Image
+            src={`/blog/${post.slug}.jpg`}
+            alt={post.heroAlt}
+            fill
+            priority
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="object-cover"
+          />
         </div>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-12 lg:grid-cols-[220px_1fr]">
