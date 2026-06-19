@@ -132,7 +132,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.18em];
+    @apply inline-flex w-fit max-w-full items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-[0.18em];
     border-color: var(--hairline);
     color: rgb(var(--brand-bright));
     background: rgba(56, 182, 255, 0.06);
