@@ -59,6 +59,16 @@ npm install --no-save sharp
 node scripts/gen-blog-images.mjs
 ```
 
+### Page title backgrounds
+
+Inner pages use abstract on-brand title backgrounds in `public/heroes/`, rendered
+behind the `PageHero` component with a dark overlay. Regenerate or add variants via:
+
+```bash
+npm install --no-save sharp
+node scripts/gen-hero-images.mjs
+```
+
 ## Project structure
 
 ```

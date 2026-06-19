@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SERVICES } from "@/lib/services";
 import { pageMeta } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { SERVICE_ICONS, ArrowRight } from "@/components/icons";
@@ -20,14 +20,12 @@ export default function ServicesHub() {
     <>
       <Breadcrumbs items={[{ name: "Services", path: "/services" }]} />
 
-      <section className="container-page mt-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="Services"
-          title="One agency for web, search and AI"
-          intro="Webnetic brings web development, search optimisation and AI under one roof. Each service stands on its own, and together they form a system that helps Sydney businesses get found, win trust and grow."
-        />
-      </section>
+      <PageHero
+        image="/heroes/services.jpg"
+        eyebrow="Services"
+        title="One agency for web, search and AI"
+        intro="Webnetic brings web development, search optimisation and AI under one roof. Each service stands on its own, and together they form a system that helps Sydney businesses get found, win trust and grow."
+      />
 
       <section className="container-page mt-16">
         <div className="grid gap-4 lg:grid-cols-2">

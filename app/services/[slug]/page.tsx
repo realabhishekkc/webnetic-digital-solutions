@@ -7,6 +7,7 @@ import { pageMeta } from "@/lib/seo";
 import { mailtoQuote } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { FAQAccordion } from "@/components/FAQ";
 import { CTABand } from "@/components/CTABand";
@@ -55,28 +56,19 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       />
 
       {/* Hero */}
-      <section className="container-page mt-10">
-        <Reveal className="relative overflow-hidden rounded-3xl border border-hairline bg-surface p-8 sm:p-12">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 opacity-70"
-            style={{ background: "radial-gradient(circle at 80% -10%, rgba(56,182,255,0.18), transparent 55%)" }}
-          />
-          <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-hairline text-brand">
-            <Icon size={26} />
-          </span>
-          <h1 className="mt-6 max-w-3xl text-display-lg font-semibold text-ink">{s.h1}</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">{s.valueProp}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={mailtoQuote(`${s.name} enquiry`)} className="btn-primary">
-              Start a project <ArrowRight size={16} />
-            </a>
-            <Link href="/services" className="btn-ghost">
-              All services
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+      <PageHero
+        image={`/heroes/service-${s.slug}.jpg`}
+        icon={<Icon size={26} />}
+        title={s.h1}
+        intro={s.valueProp}
+      >
+        <a href={mailtoQuote(`${s.name} enquiry`)} className="btn-primary">
+          Start a project <ArrowRight size={16} />
+        </a>
+        <Link href="/services" className="btn-ghost">
+          All services
+        </Link>
+      </PageHero>
 
       {/* What's included */}
       <section className="container-page mt-24">

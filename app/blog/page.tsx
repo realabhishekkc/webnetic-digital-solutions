@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { BlogList } from "@/components/BlogList";
 import { CTABand } from "@/components/CTABand";
 
@@ -17,14 +17,12 @@ export default function BlogPage() {
     <>
       <Breadcrumbs items={[{ name: "Blog", path: "/blog" }]} />
 
-      <section className="container-page mt-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="Blog"
-          title="Insights on web, search and AI"
-          intro="Clear, practical writing on building fast websites, ranking on Google, getting cited by AI engines and automating the work behind the scenes."
-        />
-      </section>
+      <PageHero
+        image="/heroes/blog.jpg"
+        eyebrow="Blog"
+        title="Insights on web, search and AI"
+        intro="Clear, practical writing on building fast websites, ranking on Google, getting cited by AI engines and automating the work behind the scenes."
+      />
 
       <section className="container-page mt-12">
         <BlogList />
