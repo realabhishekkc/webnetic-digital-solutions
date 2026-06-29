@@ -14,29 +14,43 @@ function escapeHtml(str: string): string {
 }
 
 // ── SMTP singleton ─────────────────────────────────────────────────────────
-// Created once per process, reused across requests.
-// Throws if required env vars are absent so the caller can return 503.
+// Singleton in production (reused across requests).
+// In development, always create fresh to avoid stale connections after hot reload.
+
+const IS_DEV = process.env.NODE_ENV !== "production";
 
 let _transporter: Transporter | null = null;
 
-function getTransporter(): Transporter {
-  if (_transporter) return _transporter;
-
+export function buildTransporter(): Transporter {
   const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS } = process.env;
 
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    throw new Error("SMTP environment variables are not configured.");
+    throw new Error(
+      `SMTP env vars missing — present: SMTP_HOST=${!!SMTP_HOST} SMTP_USER=${!!SMTP_USER} SMTP_PASS=${!!SMTP_PASS}`
+    );
   }
 
-  _transporter = nodemailer.createTransport({
+  return nodemailer.createTransport({
     host: SMTP_HOST,
     port: Number(SMTP_PORT ?? 465),
-    // SMTP_SECURE defaults to true — port 465 uses implicit SSL.
-    // Set SMTP_SECURE=false only for port 587 (STARTTLS).
+    // port 465 → implicit SSL (secure: true); port 587 → STARTTLS (secure: false)
     secure: SMTP_SECURE !== "false",
     auth: { user: SMTP_USER, pass: SMTP_PASS },
+    tls: {
+      minVersion: "TLSv1.2",
+      // Allow self-signed certs only when explicitly opted-in during local testing.
+      // Never set SMTP_TLS_REJECT_UNAUTHORIZED=false in production.
+      rejectUnauthorized: process.env.SMTP_TLS_REJECT_UNAUTHORIZED !== "false",
+    },
+    // Verbose SMTP session logs appear in the terminal in dev — helps diagnose auth errors.
+    logger: IS_DEV,
+    debug: IS_DEV,
   });
+}
 
+function getTransporter(): Transporter {
+  if (!IS_DEV && _transporter) return _transporter;
+  _transporter = buildTransporter();
   return _transporter;
 }
 
@@ -245,10 +259,16 @@ export async function POST(req: Request) {
   let transport: Transporter;
   try {
     transport = getTransporter();
-  } catch {
-    // Credential misconfiguration — log server-side only, return generic error
-    console.error("[contact] SMTP transporter could not be created — check SMTP_* env vars.");
-    return NextResponse.json({ error: "Email service unavailable. Please contact us directly." }, { status: 503 });
+  } catch (err) {
+    const msg = (err as Error).message;
+    console.error("[contact] SMTP transporter could not be created:", msg);
+    return NextResponse.json(
+      {
+        error: "Email service unavailable. Please contact us directly.",
+        ...(IS_DEV && { _debug: msg }),
+      },
+      { status: 503 }
+    );
   }
 
   const data: ContactData = {
@@ -290,10 +310,18 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (err) {
-    // Log the SMTP error message server-side (never forward to client)
-    console.error("[contact] SMTP send failed:", (err as Error).message);
+    const e = err as NodeJS.ErrnoException & { responseCode?: number; response?: string };
+    console.error(
+      `[contact] SMTP send failed | code=${e.code ?? "—"} | responseCode=${e.responseCode ?? "—"} | ${e.message}`
+    );
     return NextResponse.json(
-      { error: "Failed to send. Please try again or email us at info@webnetic.com.au." },
+      {
+        error: "Failed to send. Please try again or email us at info@webnetic.com.au.",
+        // Exposes SMTP details in the browser network tab during local dev only.
+        ...(IS_DEV && {
+          _debug: { code: e.code, responseCode: e.responseCode, message: e.message },
+        }),
+      },
       { status: 500 }
     );
   }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV, mailtoQuote } from "@/lib/site";
+import { NAV } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
@@ -121,9 +121,9 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a href={mailtoQuote("Quote request")} className="btn-primary hidden text-sm sm:inline-flex">
+          <Link href="/contact" className="btn-primary hidden text-sm sm:inline-flex">
             Get a quote
-          </a>
+          </Link>
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-ink lg:hidden"
@@ -164,9 +164,9 @@ export function Header() {
                   </Link>
                 ))}
               </div>
-              <a href={mailtoQuote("Quote request")} className="btn-primary mt-2 w-full">
+              <Link href="/contact" className="btn-primary mt-2 w-full">
                 Get a quote
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
