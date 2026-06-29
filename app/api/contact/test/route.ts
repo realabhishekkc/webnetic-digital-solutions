@@ -9,11 +9,15 @@
  * Returns 403 in production so it is never exposed publicly.
  */
 import { NextResponse } from "next/server";
-import { buildTransporter } from "@/lib/mailer";
+import { buildTransporter, SHOW_DIAGNOSTICS } from "@/lib/mailer";
 
 export async function GET() {
-  if (process.env.NODE_ENV === "production") {
-    return NextResponse.json({ error: "Not available in production." }, { status: 403 });
+  // Available in dev, or in production only while DEBUG_CONTACT=true is set.
+  if (!SHOW_DIAGNOSTICS) {
+    return NextResponse.json(
+      { error: "Not available. Set DEBUG_CONTACT=true in your environment to enable temporarily." },
+      { status: 403 }
+    );
   }
 
   const pass = process.env.SMTP_PASS ?? "";
@@ -68,7 +72,12 @@ function hints(e: NodeJS.ErrnoException & { responseCode?: number }): string[] {
   if (e.code === "ECONNREFUSED")
     h.push("Connection refused — wrong SMTP_HOST or SMTP_PORT, or a firewall is blocking the connection.");
   if (e.code === "ETIMEDOUT" || e.code === "ESOCKET")
-    h.push("Connection timed out — your ISP or network may block outbound port 465. Try SMTP_PORT=587 with SMTP_SECURE=false.");
+    h.push(
+      "Connection timed out / socket error — the host is blocking the outbound SMTP connection. " +
+        "On Hostinger Node.js hosting this is common: (1) since the mail server is on the same provider, try SMTP_HOST=localhost (or 127.0.0.1) with SMTP_PORT=465; " +
+        "(2) or try SMTP_PORT=587 with SMTP_SECURE=false; " +
+        "(3) if both fail, outbound SMTP may be blocked on your plan — ask Hostinger support to allow outbound SMTP, or whitelist smtp.hostinger.com."
+    );
   if (e.responseCode === 535 || e.code === "EAUTH")
     h.push(
       "Authentication failed (535) — SMTP_PASS is wrong, or this is the Hostinger panel password rather than the email account password. Log into Hostinger hPanel → Emails → Manage, then reset the email password and use that here."
@@ -76,6 +85,6 @@ function hints(e: NodeJS.ErrnoException & { responseCode?: number }): string[] {
   if (e.code === "CERT_HAS_EXPIRED" || e.code === "UNABLE_TO_VERIFY_LEAF_SIGNATURE")
     h.push("TLS certificate issue — add SMTP_TLS_REJECT_UNAUTHORIZED=false to .env.local temporarily to confirm this is the cause, then report it to Hostinger.");
   if (!h.length)
-    h.push("Check the terminal (dev server output) for the full SMTP session transcript — debug logging is enabled in development.");
+    h.push("Check your host's application logs for [contact] lines with the full SMTP error.");
   return h;
 }

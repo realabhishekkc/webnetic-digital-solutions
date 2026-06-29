@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { Transporter } from "nodemailer";
-import { getTransporter, IS_DEV } from "@/lib/mailer";
+import { getTransporter, SHOW_DIAGNOSTICS } from "@/lib/mailer";
 
 // ── helpers ────────────────────────────────────────────────────────────────
 
@@ -224,7 +224,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         error: "Email service unavailable. Please contact us directly.",
-        ...(IS_DEV && { _debug: msg }),
+        ...(SHOW_DIAGNOSTICS && { _debug: msg }),
       },
       { status: 503 }
     );
@@ -288,8 +288,8 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         error: "Failed to send. Please try again or email us at info@webnetic.com.au.",
-        // Exposes SMTP details in the browser network tab during local dev only.
-        ...(IS_DEV && {
+        // Exposes SMTP details in dev, or in prod while DEBUG_CONTACT=true.
+        ...(SHOW_DIAGNOSTICS && {
           _debug: { code: e.code, responseCode: e.responseCode, message: e.message },
         }),
       },

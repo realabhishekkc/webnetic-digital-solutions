@@ -7,6 +7,14 @@ import type { Transporter } from "nodemailer";
 
 export const IS_DEV = process.env.NODE_ENV !== "production";
 
+// Temporary production diagnostics. Set DEBUG_CONTACT=true in the host's env
+// to expose the SMTP test endpoint and include error details in responses,
+// then unset it once email is confirmed working. Never leave on permanently.
+export const DEBUG_CONTACT = process.env.DEBUG_CONTACT === "true";
+
+// When true, surface SMTP error details to the client / test page.
+export const SHOW_DIAGNOSTICS = IS_DEV || DEBUG_CONTACT;
+
 let _transporter: Transporter | null = null;
 
 export function buildTransporter(): Transporter {
