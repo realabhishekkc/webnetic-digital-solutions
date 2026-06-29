@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BulbBrain } from "./icons";
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function Logo({ compact = false, light = false }: { compact?: boolean; light?: boolean }) {
   return (
     <Link
       href="/"
@@ -21,10 +21,10 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       </span>
       {!compact && (
         <span className="leading-none">
-          <span className="block font-display text-[1.05rem] font-bold tracking-tight text-ink">
+          <span className={`block font-display text-[1.05rem] font-bold tracking-tight ${light ? "text-white" : "text-ink"}`}>
             WEBNETIC
           </span>
-          <span className="block text-[0.62rem] font-medium uppercase tracking-[0.28em] text-ink-muted">
+          <span className={`block text-[0.62rem] font-medium uppercase tracking-[0.28em] ${light ? "text-white/70" : "text-ink-muted"}`}>
             Digital Solutions
           </span>
         </span>

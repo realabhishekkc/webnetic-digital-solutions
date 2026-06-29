@@ -5,13 +5,8 @@ import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { Check, ArrowRight } from "./icons";
 
-type Errors = Partial<Record<"name" | "email" | "message", string>>;
+type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
 
-/**
- * Contact form. With no backend connected, it composes a mailto to info@webnetic.com.au.
- * To connect a real handler, replace the body of `submit` with a fetch() to your endpoint
- * (e.g. a Next.js route handler, Formspree, or Resend) — see README.
- */
 export function ContactForm() {
   const [values, setValues] = useState({
     name: "",
@@ -21,6 +16,7 @@ export function ContactForm() {
     message: "",
   });
   const [errors, setErrors] = useState<Errors>({});
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
   const set = (k: keyof typeof values) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
@@ -36,25 +32,28 @@ export function ContactForm() {
     return Object.keys(next).length === 0;
   };
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-
-    const subject = `New enquiry${values.service ? ` — ${values.service}` : ""} from ${values.name}`;
-    const body = [
-      `Name: ${values.name}`,
-      `Email: ${values.email}`,
-      values.company ? `Company: ${values.company}` : null,
-      values.service ? `Service: ${values.service}` : null,
-      "",
-      values.message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    // No backend connected — hand off to the user's email client.
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    setSending(true);
+    setErrors({});
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setErrors({ form: (data as { error?: string }).error || "Something went wrong. Please try again." });
+        return;
+      }
+      setSent(true);
+    } catch {
+      setErrors({ form: "Network error. Please check your connection and try again." });
+    } finally {
+      setSending(false);
+    }
   };
 
   if (sent) {
@@ -63,12 +62,11 @@ export function ContactForm() {
         <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand/10 text-brand">
           <Check size={26} />
         </span>
-        <h2 className="mt-5 font-display text-xl font-medium text-ink">Thanks — your email is ready to send.</h2>
+        <h2 className="mt-5 font-display text-xl font-medium text-ink">Message sent — thanks!</h2>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-muted">
-          We&apos;ve opened a pre-filled message in your email app. If it didn&apos;t open, write to us
-          directly at{" "}
-          <a href={`mailto:${SITE.email}`} className="text-brand-bright">{SITE.email}</a>. We reply
-          within one business day.
+          We&apos;ve received your enquiry and will reply within one business day. If it&apos;s urgent,
+          email us directly at{" "}
+          <a href={`mailto:${SITE.email}`} className="text-brand-bright">{SITE.email}</a>.
         </p>
         <button type="button" onClick={() => setSent(false)} className="btn-ghost mt-6">
           Send another message
@@ -134,8 +132,13 @@ export function ContactForm() {
         />
       </Field>
 
-      <button type="submit" className="btn-primary w-full sm:w-auto">
-        Send message <ArrowRight size={16} />
+      {errors.form && (
+        <p className="rounded-xl border border-[#ff8589]/30 bg-[#ff8589]/10 px-4 py-3 text-sm text-[#ff8589]">
+          {errors.form}
+        </p>
+      )}
+      <button type="submit" disabled={sending} className="btn-primary w-full sm:w-auto disabled:opacity-60">
+        {sending ? "Sending…" : "Send message"} {!sending && <ArrowRight size={16} />}
       </button>
 
       <style jsx>{`
