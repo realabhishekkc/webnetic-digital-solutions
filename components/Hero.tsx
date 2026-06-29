@@ -1,5 +1,5 @@
-"use client";
-
+// Server component — the static headline/CTA render on the server. Only the
+// canvas and typewriter below are client islands (they carry their own "use client").
 import { mailtoQuote } from "@/lib/site";
 import { HeroCanvas } from "./HeroCanvas";
 import { Typewriter } from "./Typewriter";

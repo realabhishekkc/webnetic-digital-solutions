@@ -9,15 +9,14 @@
  * Returns 403 in production so it is never exposed publicly.
  */
 import { NextResponse } from "next/server";
-import { buildTransporter, SHOW_DIAGNOSTICS } from "@/lib/mailer";
+import { buildTransporter, IS_DEV } from "@/lib/mailer";
 
 export async function GET() {
-  // Available in dev, or in production only while DEBUG_CONTACT=true is set.
-  if (!SHOW_DIAGNOSTICS) {
-    return NextResponse.json(
-      { error: "Not available. Set DEBUG_CONTACT=true in your environment to enable temporarily." },
-      { status: 403 }
-    );
+  // Strictly development-only. This endpoint reveals SMTP host/user/port and the
+  // password length, so it must never be reachable in production — not even with
+  // DEBUG_CONTACT set. Diagnose production email failures via server logs instead.
+  if (!IS_DEV) {
+    return NextResponse.json({ error: "Not found." }, { status: 404 });
   }
 
   const pass = process.env.SMTP_PASS ?? "";
