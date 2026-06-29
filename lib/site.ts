@@ -10,7 +10,7 @@ export const SITE = {
   email: "info@webnetic.com.au",
   phone: "0482 387 484", // display format
   phoneE164: "+61482387484", // tel: links + schema
-  street: "9 Blaxcell Street",
+  street: "Blaxcell Street",
   addressLocality: "Granville", // suburb on the postal address (NAP)
   postcode: "2142",
   locality: "Sydney", // metro area for general copy / areaServed

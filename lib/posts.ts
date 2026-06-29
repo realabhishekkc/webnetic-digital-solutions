@@ -1439,6 +1439,301 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "cleaning-business-website",
+    title: "Website design for cleaning businesses",
+    titleTag: "Cleaning Business Website Design | Sydney",
+    metaDescription:
+      "Need a website for your cleaning business? Webnetic builds fast, booking-ready websites that win local cleaning jobs across Sydney. Get a quote.",
+    excerpt:
+      "A cleaning business lives or dies by local enquiries. Here is how a fast, booking-ready website turns 'cleaner near me' searches into booked jobs.",
+    category: "Business",
+    date: "2026-06-10",
+    readingTime: 6,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "Bright, freshly cleaned modern living room with sunlight, representing a cleaning business",
+    intro:
+      "If you run a cleaning business, your website is your most reliable salesperson: it answers questions, proves you are trustworthy and turns local searches into booked jobs while you are out on site. Webnetic Digital Solutions builds fast, booking-ready websites for domestic and commercial cleaning businesses across Sydney and Australia.",
+    sections: [
+      {
+        id: "why-cleaning-website",
+        heading: "Why does a cleaning business need a website?",
+        blocks: [
+          {
+            type: "p",
+            text: "Most people looking for a cleaner search Google or ask an AI assistant for a 'cleaner near me' before they ever pick up the phone. Without a fast, trustworthy website you are invisible at the exact moment someone is ready to book. A website lets you show your services, service areas, pricing, reviews and a quote form that works on a phone.",
+          },
+          {
+            type: "p",
+            text: "Social media pages help, but they are rented reach that can change overnight. A website is an asset you own. It ranks on Google, builds trust on your terms and feeds the AI answer engines that increasingly recommend local businesses.",
+          },
+        ],
+      },
+      {
+        id: "what-we-build",
+        heading: "What we build for cleaning businesses",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "A fast, mobile-first website that loads in under two seconds, since most cleaning searches happen on a phone.",
+              "Clear service pages for each offering: end-of-lease, commercial, carpet, NDIS, Airbnb and regular domestic cleaning.",
+              "Online quote and booking forms that send enquiries straight to your inbox.",
+              "Local SEO and Google Business Profile setup so nearby suburbs find you.",
+              "Review and before-and-after galleries that build instant trust.",
+              "AI automation that replies to enquiries, sends quotes and follows up while you work.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "get-found",
+        heading: "How do cleaning businesses get found on Google?",
+        blocks: [
+          {
+            type: "p",
+            text: "Local SEO. We set up your Google Business Profile, keep your business name, address and phone consistent everywhere, build suburb-level service pages and add LocalBusiness schema so you appear when someone searches a service plus their suburb, such as 'end of lease cleaning Parramatta'. The same structure helps AI engines like ChatGPT and Google AI Overviews recommend you when people ask for a cleaner.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "SEO services", href: "/services/seo" },
+              { label: "Local SEO checklist", href: "/blog/local-seo-checklist-small-business" },
+              { label: "See our work", href: "/work" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "cost",
+        heading: "How much does a cleaning business website cost?",
+        blocks: [
+          {
+            type: "p",
+            text: "Most agencies charge around $1,000 to $3,000 for a small business website. The same quality can often be delivered from around $500 to $3,000 depending on how many services and pages you need. Webnetic gives a fixed, itemised quote after a short discovery call, so there are no surprises, and a minimum delivery of about one week based on scope.",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you build websites for cleaning businesses?",
+        a: "Yes. Webnetic Digital Solutions builds fast, SEO-ready websites for domestic and commercial cleaning businesses across Sydney and Australia, including end-of-lease, carpet, NDIS, Airbnb and office cleaning. We work locally and remotely.",
+      },
+      {
+        q: "How do I get more cleaning leads from my website?",
+        a: "Combine three things: a fast mobile site with an obvious quote button, local SEO so nearby suburbs find you on Google, and automated follow-up so no enquiry goes cold. Webnetic builds all three into every cleaning website we ship.",
+      },
+      {
+        q: "How much does a cleaning website cost?",
+        a: "Most agencies charge around $1,000 to $3,000. The same quality can often be delivered from around $500 to $3,000 depending on scope. Webnetic provides a fixed, itemised quote after a short discovery call.",
+      },
+      {
+        q: "How long does it take to build a cleaning website?",
+        a: "Most cleaning business websites take from about one week, depending on how many services and pages you need and how quickly you can provide content and photos. Email info@webnetic.com.au for a timeline.",
+      },
+    ],
+  },
+  {
+    slug: "ndis-provider-website",
+    title: "Website design for NDIS providers",
+    titleTag: "NDIS Provider Website Design | Sydney",
+    metaDescription:
+      "Need an NDIS website? Webnetic builds accessible, compliant, referral-ready websites for NDIS providers across Sydney and Australia. Get a quote.",
+    excerpt:
+      "NDIS participants and support coordinators judge providers by their website. Here is how to build one that is accessible, trustworthy and referral-ready.",
+    category: "Business",
+    date: "2026-06-17",
+    readingTime: 7,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "Warm, welcoming support worker assisting a participant, representing an NDIS provider",
+    intro:
+      "An NDIS website needs to do three things at once: be genuinely accessible to people of all abilities, build trust with participants and support coordinators, and make referrals effortless. Webnetic Digital Solutions builds accessible, compliant, referral-ready websites for registered and unregistered NDIS providers across Sydney and Australia.",
+    sections: [
+      {
+        id: "why-ndis-website",
+        heading: "Why do NDIS providers need a strong website?",
+        blocks: [
+          {
+            type: "p",
+            text: "Participants, families and support coordinators almost always check a provider's website before they make a referral. A slow, confusing or inaccessible site quietly costs you placements, because it signals that working with you will be just as hard. A clear, accessible website does the opposite: it shows your services, service areas and values, and makes it easy to enquire or refer.",
+          },
+          {
+            type: "p",
+            text: "Accessibility is not optional in this sector. Many participants use screen readers, keyboard navigation or need high-contrast text. A website that meets WCAG 2.1 AA standards reaches every participant and demonstrates that inclusion is core to how you work.",
+          },
+        ],
+      },
+      {
+        id: "what-we-build",
+        heading: "What we build for NDIS providers",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Accessible, WCAG 2.1 AA websites with proper contrast, keyboard navigation and screen-reader support.",
+              "Plain-language service pages for each support, such as SIL, community access, support coordination, therapy and daily living.",
+              "Clear referral and enquiry forms for participants, families and support coordinators.",
+              "Service-area pages so participants in your regions find you on Google.",
+              "Trust signals: registration details, team profiles, testimonials and clear contact options.",
+              "AI automation to acknowledge referrals quickly and route them to the right person.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "compliance",
+        heading: "What should an NDIS provider website include?",
+        blocks: [
+          {
+            type: "p",
+            text: "Beyond accessibility, an effective NDIS website is honest and clear about what you offer and where. List your services in plain language, state your service areas, show whether you are a registered or unregistered provider, and make your contact details easy to find. Keep claims factual and respectful, in line with NDIS advertising expectations, and avoid jargon that participants may not know.",
+          },
+          {
+            type: "p",
+            text: "We also structure the site for search. Clear headings, a logical page for each service and LocalBusiness and FAQ schema help you rank on Google and get cited by AI answer engines when people ask for NDIS support in your area.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "SEO services", href: "/services/seo" },
+              { label: "Social media management", href: "/services/social-media-management" },
+              { label: "How to get cited by AI search", href: "/blog/how-to-get-cited-by-ai-search" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "cost",
+        heading: "How much does an NDIS website cost?",
+        blocks: [
+          {
+            type: "p",
+            text: "Most agencies charge around $1,000 to $3,000 for a small provider website. The same quality, including accessibility done properly, can often be delivered from around $500 to $3,000 depending on scope. Webnetic gives a fixed, itemised quote after a short discovery call, with a minimum delivery of about one week based on scope.",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you build websites for NDIS providers?",
+        a: "Yes. Webnetic Digital Solutions builds accessible, WCAG 2.1 AA websites for registered and unregistered NDIS providers across Sydney and Australia, covering supports such as SIL, community access, support coordination and therapy services.",
+      },
+      {
+        q: "Does an NDIS website need to be accessible?",
+        a: "Yes. Many participants rely on screen readers, keyboard navigation or high-contrast text, so an NDIS website should meet WCAG 2.1 AA standards. Webnetic builds accessibility in from the first line, not as an afterthought.",
+      },
+      {
+        q: "What should an NDIS provider website include?",
+        a: "Plain-language service pages, your service areas, registration status, team and trust signals, easy referral and enquiry forms, and accessible design. Webnetic includes all of this and structures it for Google and AI search.",
+      },
+      {
+        q: "How much does an NDIS website cost?",
+        a: "Most agencies charge around $1,000 to $3,000. The same quality, with accessibility done properly, can often be delivered from around $500 to $3,000 depending on scope. Email info@webnetic.com.au for a fixed quote.",
+      },
+    ],
+  },
+  {
+    slug: "roofing-company-website",
+    title: "Website design for roofing companies",
+    titleTag: "Roofing Company Website Design | Sydney",
+    metaDescription:
+      "Need a roofing website? Webnetic builds fast, lead-generating websites that win roofing jobs across Sydney with quotes, galleries and local SEO.",
+    excerpt:
+      "Roofing is a high-value, high-trust purchase. Here is how a fast website with strong proof and local SEO turns roof searches into quote requests.",
+    category: "Business",
+    date: "2026-06-24",
+    readingTime: 6,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "Roofer installing a new metal roof on a house against a clear sky",
+    intro:
+      "Roofing is a high-value, high-trust purchase, so your website has to work hard: load fast, prove quality with real photos, and make requesting a quote effortless. Webnetic Digital Solutions builds fast, lead-generating websites for roofing companies and contractors across Sydney and Australia.",
+    sections: [
+      {
+        id: "why-roofing-website",
+        heading: "Why do roofing companies need a website?",
+        blocks: [
+          {
+            type: "p",
+            text: "When a roof leaks or needs replacing, homeowners search Google or ask an AI assistant for a roofer in their area, then judge each option in seconds by its website. If yours is slow, dated or hard to use on a phone, they move on to a competitor before you ever hear from them. A strong website captures that demand and turns it into quote requests.",
+          },
+          {
+            type: "p",
+            text: "Roofing is also a trust purchase. Photos of completed jobs, reviews, licences and clear service areas reassure a homeowner that you will do the work properly. Your website is where that proof lives and works for you around the clock.",
+          },
+        ],
+      },
+      {
+        id: "what-we-build",
+        heading: "What we build for roofing companies",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "A fast, mobile-first website that loads in under two seconds, because roofing searches are urgent and mostly on phones.",
+              "Service pages for each job type: roof restoration, replacement, repairs, metal and tile, leak detection and storm damage.",
+              "Prominent quote-request and click-to-call buttons on every page.",
+              "Before-and-after galleries that prove the quality of your work.",
+              "Local SEO and Google Business Profile setup so nearby suburbs find you.",
+              "AI automation that responds to quote requests fast, before a competitor does.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "get-found",
+        heading: "How do roofing companies get more leads online?",
+        blocks: [
+          {
+            type: "p",
+            text: "Speed, proof and local SEO. A site that loads instantly keeps urgent visitors from bouncing, strong galleries and reviews convert them, and local SEO puts you in front of the right suburbs. We set up your Google Business Profile, consistent business details, suburb-level service pages and LocalBusiness schema so you rank for searches like 'roof repairs' plus a suburb, and so AI answer engines recommend you when homeowners ask for a roofer.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "SEO services", href: "/services/seo" },
+              { label: "Make your website load faster", href: "/blog/how-to-speed-up-your-website" },
+              { label: "See our work", href: "/work" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+      {
+        id: "cost",
+        heading: "How much does a roofing website cost?",
+        blocks: [
+          {
+            type: "p",
+            text: "Most agencies charge around $1,000 to $3,000 for a roofing or trades website. The same quality can often be delivered from around $500 to $3,000 depending on how many service pages and galleries you need. Webnetic gives a fixed, itemised quote after a short discovery call, with a minimum delivery of about one week based on scope.",
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do you build websites for roofing companies?",
+        a: "Yes. Webnetic Digital Solutions builds fast, lead-generating websites for roofing companies and contractors across Sydney and Australia, covering restoration, replacement, repairs, metal and tile roofing, and storm damage work.",
+      },
+      {
+        q: "How do roofing companies get more leads from a website?",
+        a: "Three things work together: a fast mobile site so urgent visitors do not bounce, strong before-and-after galleries and reviews to build trust, and local SEO so the right suburbs find you. Webnetic builds all three into every roofing website.",
+      },
+      {
+        q: "How much does a roofing website cost?",
+        a: "Most agencies charge around $1,000 to $3,000. The same quality can often be delivered from around $500 to $3,000 depending on scope. Webnetic provides a fixed, itemised quote after a short discovery call.",
+      },
+      {
+        q: "How long does it take to build a roofing website?",
+        a: "Most roofing websites take from about one week, depending on the number of service pages and galleries and how quickly you can provide job photos and content. Email info@webnetic.com.au for a timeline.",
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);

@@ -33,6 +33,9 @@ const POSTS = [
   { slug: "local-seo-checklist-small-business", display: "Local SEO checklist for small businesses", category: "SEO" },
   { slug: "how-to-get-cited-by-ai-search", display: "How to get cited by ChatGPT and AI search", category: "AI" },
   { slug: "do-you-still-need-a-website-in-2026", display: "Do you still need a website in 2026?", category: "Business" },
+  { slug: "cleaning-business-website", display: "Website design for cleaning businesses", category: "Business" },
+  { slug: "ndis-provider-website", display: "Website design for NDIS providers", category: "Business" },
+  { slug: "roofing-company-website", display: "Website design for roofing companies", category: "Business" },
 ];
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
