@@ -146,18 +146,24 @@ export function ContactForm() {
           width: 100%;
           border-radius: 0.75rem;
           border: 1px solid var(--hairline);
-          background: var(--bg);
+          background: rgb(var(--bg));
           padding: 0.7rem 0.9rem;
           font-size: 0.9rem;
-          color: var(--ink);
+          color: rgb(var(--ink));
           transition: border-color 0.2s ease;
         }
         .input::placeholder {
-          color: var(--ink-muted);
+          color: rgb(var(--ink-muted));
         }
         .input:focus {
           outline: none;
           border-color: rgba(56, 182, 255, 0.6);
+        }
+        /* Native dropdown options inherit browser defaults (white-on-white in
+           dark mode) unless explicitly themed. */
+        .input option {
+          background: rgb(var(--surface));
+          color: rgb(var(--ink));
         }
       `}</style>
     </form>

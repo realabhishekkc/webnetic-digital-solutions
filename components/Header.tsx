@@ -43,7 +43,7 @@ export function Header() {
       }`}
     >
       <div className="container-page flex items-center justify-between gap-4">
-        <Logo compact={scrolled} light={!scrolled} />
+        <Logo compact={scrolled} />
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {NAV.map((item) =>
