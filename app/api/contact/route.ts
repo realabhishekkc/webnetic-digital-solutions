@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import type { Transporter } from "nodemailer";
+import { getTransporter, IS_DEV } from "@/lib/mailer";
 
 // ── helpers ────────────────────────────────────────────────────────────────
 
@@ -11,47 +11,6 @@ function escapeHtml(str: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
-}
-
-// ── SMTP singleton ─────────────────────────────────────────────────────────
-// Singleton in production (reused across requests).
-// In development, always create fresh to avoid stale connections after hot reload.
-
-const IS_DEV = process.env.NODE_ENV !== "production";
-
-let _transporter: Transporter | null = null;
-
-export function buildTransporter(): Transporter {
-  const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS } = process.env;
-
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    throw new Error(
-      `SMTP env vars missing — present: SMTP_HOST=${!!SMTP_HOST} SMTP_USER=${!!SMTP_USER} SMTP_PASS=${!!SMTP_PASS}`
-    );
-  }
-
-  return nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT ?? 465),
-    // port 465 → implicit SSL (secure: true); port 587 → STARTTLS (secure: false)
-    secure: SMTP_SECURE !== "false",
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-    tls: {
-      minVersion: "TLSv1.2",
-      // Allow self-signed certs only when explicitly opted-in during local testing.
-      // Never set SMTP_TLS_REJECT_UNAUTHORIZED=false in production.
-      rejectUnauthorized: process.env.SMTP_TLS_REJECT_UNAUTHORIZED !== "false",
-    },
-    // Verbose SMTP session logs appear in the terminal in dev — helps diagnose auth errors.
-    logger: IS_DEV,
-    debug: IS_DEV,
-  });
-}
-
-function getTransporter(): Transporter {
-  if (!IS_DEV && _transporter) return _transporter;
-  _transporter = buildTransporter();
-  return _transporter;
 }
 
 // ── email templates ────────────────────────────────────────────────────────

@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Emit a self-contained production server at .next/standalone (minimal node_modules).
+  // This is the artifact deployed to Hostinger's Node.js app — see DEPLOYMENT-HOSTINGER.md.
+  output: "standalone",
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [],

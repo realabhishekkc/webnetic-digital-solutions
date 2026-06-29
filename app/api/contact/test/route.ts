@@ -9,7 +9,7 @@
  * Returns 403 in production so it is never exposed publicly.
  */
 import { NextResponse } from "next/server";
-import { buildTransporter } from "../route";
+import { buildTransporter } from "@/lib/mailer";
 
 export async function GET() {
   if (process.env.NODE_ENV === "production") {
