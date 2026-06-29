@@ -287,26 +287,38 @@ export async function POST(req: Request) {
   const subject = `New enquiry${data.service ? ` — ${data.service}` : ""} from ${data.name}`;
 
   try {
-    // Send both emails concurrently
-    await Promise.all([
-      // 1 · Notification email to Webnetic inbox
-      transport.sendMail({
-        from,
-        to: contactEmail,
-        replyTo: data.email,
-        subject,
-        text: notificationText(data),
-        html: notificationHtml(data),
-      }),
-      // 2 · Confirmation email to the visitor
-      transport.sendMail({
-        from,
-        to: data.email,
-        subject: "We received your message — Webnetic Digital Solutions",
-        text: confirmationText(data.name),
-        html: confirmationHtml(data.name),
-      }),
-    ]);
+    // 1 · Notification to the Webnetic inbox — this is the critical send.
+    //     If it fails, the request fails (the enquiry must reach us).
+    await transport.sendMail({
+      from,
+      to: contactEmail,
+      replyTo: data.email,
+      subject,
+      text: notificationText(data),
+      html: notificationHtml(data),
+    });
+
+    // 2 · Confirmation to the visitor — best-effort only.
+    //     A failure here (e.g. an invalid/blocked address that bounces) must
+    //     never fail the request or block the enquiry. Set SEND_CONFIRMATION=false
+    //     to disable visitor confirmations entirely.
+    if (process.env.SEND_CONFIRMATION !== "false") {
+      try {
+        await transport.sendMail({
+          from,
+          to: data.email,
+          subject: "We received your message — Webnetic Digital Solutions",
+          text: confirmationText(data.name),
+          html: confirmationHtml(data.name),
+        });
+      } catch (confErr) {
+        // Logged, then swallowed — the enquiry already succeeded.
+        console.warn(
+          "[contact] Confirmation email not sent (visitor address may be invalid):",
+          (confErr as Error).message
+        );
+      }
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
