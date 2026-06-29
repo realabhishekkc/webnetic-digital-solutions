@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { POSTS, POST_CATEGORIES } from "@/lib/posts";
 import { Search, ArrowRight, Clock } from "./icons";
 
@@ -65,9 +66,15 @@ export function BlogList() {
                 href={`/blog/${p.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-surface transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow"
               >
-                <div className="relative h-40 overflow-hidden bg-gradient-to-br from-[#0F1729] to-[#161F33]">
-                  <div className="absolute inset-0 grid-backdrop opacity-40" />
-                  <span className="absolute left-4 top-4 rounded-full border border-hairline bg-bg/50 px-3 py-1 text-xs font-medium text-brand-bright backdrop-blur-md">
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={`/blog/${p.slug}.jpg`}
+                    alt={`${p.title} — Webnetic blog`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 380px"
+                    className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.04]"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full border border-hairline bg-bg/60 px-3 py-1 text-xs font-medium text-brand-bright backdrop-blur-md">
                     {p.category}
                   </span>
                 </div>

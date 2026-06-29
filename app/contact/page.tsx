@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
@@ -21,14 +21,12 @@ export default function ContactPage() {
       <JsonLd data={localBusinessSchema()} />
       <Breadcrumbs items={[{ name: "Contact", path: "/contact" }]} />
 
-      <section className="container-page mt-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="Contact"
-          title="Let's build something intelligent"
-          intro="Tell us about your project and goals. We read every message and reply within one business day with clear, honest next steps — no sales pressure, no jargon."
-        />
-      </section>
+      <PageHero
+        image="/heroes/contact.jpg"
+        eyebrow="Contact"
+        title="Let's build something intelligent"
+        intro="Tell us about your project and goals. We read every message and reply within one business day with clear, honest next steps, with no sales pressure and no jargon."
+      />
 
       <section className="container-page mt-12">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr]">

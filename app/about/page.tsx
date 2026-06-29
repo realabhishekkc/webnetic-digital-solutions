@@ -3,6 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { BulbBrain, Bolt, Shield, Gauge, Spark } from "@/components/icons";
@@ -35,14 +36,12 @@ export default function AboutPage() {
     <>
       <Breadcrumbs items={[{ name: "About", path: "/about" }]} />
 
-      <section className="container-page mt-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="About"
-          title="Where ideas become intelligent digital solutions"
-          intro="Webnetic Digital Solutions is a Sydney agency built on a simple belief: the best digital work blends genuine web craft with practical AI. The lightbulb is the idea; the brain is the intelligence that makes it real."
-        />
-      </section>
+      <PageHero
+        image="/heroes/about.jpg"
+        eyebrow="About"
+        title="Where ideas become intelligent digital solutions"
+        intro="Webnetic Digital Solutions is a Sydney agency built on a simple belief: the best digital work blends genuine web craft with practical AI. The lightbulb is the idea; the brain is the intelligence that makes it real."
+      />
 
       {/* Story */}
       <section className="container-page mt-16">

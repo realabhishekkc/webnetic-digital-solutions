@@ -8,6 +8,7 @@ import { pageMeta } from "@/lib/seo";
 import { SITE, mailtoQuote } from "@/lib/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { FAQAccordion } from "@/components/FAQ";
 import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
@@ -54,30 +55,23 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
       />
 
       {/* Hero */}
-      <section className="container-page mt-10">
-        <Reveal className="relative overflow-hidden rounded-3xl border border-hairline bg-surface p-8 sm:p-12">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 -z-10 opacity-70"
-            style={{ background: "radial-gradient(circle at 80% -10%, rgba(56,182,255,0.18), transparent 55%)" }}
-          />
-          <span className="eyebrow">
+      <PageHero
+        image="/heroes/location.jpg"
+        eyebrow={
+          <>
             <Pin size={13} /> {loc.region} · {loc.postcode}
-          </span>
-          <h1 className="mt-6 max-w-3xl text-display-lg font-semibold text-ink">
-            Web Design &amp; Development in {loc.name}, Sydney
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">{loc.intro}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={mailtoQuote(`Website enquiry — ${loc.name}`)} className="btn-primary">
-              Request a free quote <ArrowRight size={16} />
-            </a>
-            <Link href="/work" className="btn-ghost">
-              See our work
-            </Link>
-          </div>
-        </Reveal>
-      </section>
+          </>
+        }
+        title={<>Web Design &amp; Development in {loc.name}, Sydney</>}
+        intro={loc.intro}
+      >
+        <a href={mailtoQuote(`Website enquiry — ${loc.name}`)} className="btn-primary">
+          Request a free quote <ArrowRight size={16} />
+        </a>
+        <Link href="/work" className="btn-ghost">
+          See our work
+        </Link>
+      </PageHero>
 
       {/* Why local */}
       <section className="container-page mt-24">

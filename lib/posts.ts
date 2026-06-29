@@ -939,6 +939,506 @@ export const POSTS: Post[] = [
       },
     ],
   },
+  {
+    slug: "wordpress-vs-custom-website",
+    title: "WordPress vs custom website: which is right for you?",
+    titleTag: "WordPress vs Custom Website: Which Is Right? (2026)",
+    metaDescription:
+      "WordPress or a custom-coded website? Here is how they compare on cost, speed, flexibility and SEO, and how to choose the right one for your business.",
+    excerpt:
+      "WordPress or custom code? Both can be excellent. Here is how they really compare on cost, speed, flexibility and SEO, and how to choose for your business.",
+    category: "Web",
+    date: "2026-06-12",
+    readingTime: 6,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "A split scene comparing the WordPress dashboard with lines of custom code",
+    intro:
+      "WordPress and custom-coded websites are both capable of excellent results. The right choice depends on your budget, how much you will edit the site yourself, and how much performance and control you need. This guide compares them honestly so you can decide with confidence.",
+    sections: [
+      {
+        id: "what-they-are",
+        heading: "What is the difference?",
+        blocks: [
+          {
+            type: "p",
+            text: "WordPress is a content management system that powers a large share of the web and makes it easy to edit content yourself. A custom website is built from code, often with a modern framework such as Next.js, giving maximum speed and control. Headless WordPress sits in between, pairing the WordPress editor with a fast custom front-end.",
+          },
+        ],
+      },
+      {
+        id: "comparison",
+        heading: "WordPress vs custom at a glance",
+        blocks: [
+          {
+            type: "table",
+            head: ["", "WordPress", "Custom (e.g. Next.js)"],
+            rows: [
+              ["Editing content", "Very easy, built-in", "Needs a CMS added"],
+              ["Speed ceiling", "Good with care", "Excellent"],
+              ["Upfront cost", "Lower", "Higher"],
+              ["Flexibility", "Plugins and themes", "Almost unlimited"],
+              ["Best for", "Most small businesses", "Performance-critical or custom apps"],
+            ],
+          },
+        ],
+      },
+      {
+        id: "when-wordpress",
+        heading: "When WordPress is the right choice",
+        blocks: [
+          {
+            type: "p",
+            text: "WordPress is ideal when you want to update content yourself, need a blog or standard features, and want a lower upfront cost. Built well, on quality hosting and without plugin bloat, a WordPress site can be fast and rank strongly.",
+          },
+        ],
+      },
+      {
+        id: "when-custom",
+        heading: "When a custom build wins",
+        blocks: [
+          {
+            type: "p",
+            text: "Custom builds win when speed is critical, you need bespoke functionality or integrations, or you are building a web app rather than a brochure site. They deliver the best Core Web Vitals and the most control, at a higher upfront investment.",
+          },
+          {
+            type: "p",
+            text: "Webnetic builds both, and recommends the right tool for your goals rather than defaulting to one. We will tell you honestly which path gives you the best value.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "How to speed up your website", href: "/blog/how-to-speed-up-your-website" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is WordPress or a custom website better for SEO?",
+        a: "Both can rank well. SEO depends on speed, structure, content and technical health, not the platform itself. A well-built WordPress site and a custom site can both achieve green Core Web Vitals and strong rankings; a bloated build on either will not.",
+      },
+      {
+        q: "Is WordPress cheaper than a custom website?",
+        a: "Usually yes upfront, because it reuses an established system. A custom build costs more initially but can offer better performance and lower long-term complexity for the right project. We scope both transparently so you can compare value.",
+      },
+      {
+        q: "Can you make a WordPress site fast?",
+        a: "Yes. Fast WordPress comes from quality hosting, optimised images, minimal plugins, caching and clean code. Most slow WordPress sites are slow because of bloat and poor setup, not WordPress itself.",
+      },
+      {
+        q: "Which should I choose for my small business?",
+        a: "For most small businesses that want to edit content themselves, a well-built WordPress site offers the best value. If you need maximum speed, custom features or a web app, a custom build is worth the investment. We help you decide based on your goals.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-speed-up-your-website",
+    title: "How to make your website load faster in 2026",
+    titleTag: "How to Speed Up Your Website: Core Web Vitals 2026",
+    metaDescription:
+      "A slow website costs you rankings and customers. Here is how to speed up your site and pass Core Web Vitals in 2026, with the fixes that matter most.",
+    excerpt:
+      "A slow site quietly loses rankings and customers. Here are the fixes that matter most to speed up your website and pass Core Web Vitals in 2026.",
+    category: "Web",
+    date: "2026-06-05",
+    readingTime: 7,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "A speedometer overlaid on a website loading bar against a dark background",
+    intro:
+      "Website speed is not a nice-to-have. It directly affects your Google rankings, how many visitors stay, and how many become customers. This guide explains what Core Web Vitals are and the highest-impact ways to make your website load faster in 2026.",
+    sections: [
+      {
+        id: "why-speed",
+        heading: "Why website speed matters",
+        blocks: [
+          {
+            type: "p",
+            text: "A faster site ranks better and converts better. Google uses page experience as a ranking signal, and visitors abandon slow pages quickly, especially on mobile. Shaving even a second off load time can measurably lift enquiries and sales.",
+          },
+        ],
+      },
+      {
+        id: "core-web-vitals",
+        heading: "What are Core Web Vitals?",
+        blocks: [
+          {
+            type: "p",
+            text: "Core Web Vitals are Google's three key measures of real-world page experience:",
+          },
+          {
+            type: "table",
+            head: ["Metric", "Measures", "Good score"],
+            rows: [
+              ["LCP (Largest Contentful Paint)", "Loading speed", "Under 2.5s"],
+              ["INP (Interaction to Next Paint)", "Responsiveness", "Under 200ms"],
+              ["CLS (Cumulative Layout Shift)", "Visual stability", "Under 0.1"],
+            ],
+          },
+        ],
+      },
+      {
+        id: "top-fixes",
+        heading: "The highest-impact speed fixes",
+        blocks: [
+          {
+            type: "ol",
+            items: [
+              "Optimise and properly size images, and serve modern formats like WebP or AVIF.",
+              "Set width and height on images to prevent layout shift (CLS).",
+              "Reduce and defer non-critical JavaScript and third-party scripts.",
+              "Enable caching and use a content delivery network (CDN).",
+              "Choose fast, quality hosting rather than the cheapest shared plan.",
+              "Lazy-load below-the-fold images and embeds.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "measure",
+        heading: "How to measure your speed",
+        blocks: [
+          {
+            type: "p",
+            text: "Test your site with Google PageSpeed Insights and Lighthouse, which report your Core Web Vitals and specific recommendations. Measure on mobile, since that is how most people visit and how Google primarily indexes your site.",
+          },
+          {
+            type: "p",
+            text: "Webnetic builds every site for green Core Web Vitals from the first line, and can audit and speed up an existing slow website too.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "SEO services", href: "/services/seo" },
+              { label: "WordPress vs custom website", href: "/blog/wordpress-vs-custom-website" },
+              { label: "Talk to us", href: "/contact" },
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Why is my website so slow?",
+        a: "The most common causes are large unoptimised images, too many plugins or third-party scripts, no caching, and cheap shared hosting. A speed audit pinpoints the specific issues so they can be fixed in priority order.",
+      },
+      {
+        q: "What is a good website load time?",
+        a: "Aim for a Largest Contentful Paint under 2.5 seconds on mobile, and an overall load that feels near-instant. Faster is always better for both rankings and conversions.",
+      },
+      {
+        q: "Does website speed affect SEO?",
+        a: "Yes. Google uses Core Web Vitals as part of its page experience ranking signals, and faster pages keep more visitors, which indirectly supports rankings too. Speed is one of the highest-value SEO investments.",
+      },
+      {
+        q: "Can you fix my slow website?",
+        a: "Yes. Webnetic audits and optimises existing websites, including WordPress, improving images, code, caching and hosting to pass Core Web Vitals and load faster.",
+      },
+    ],
+  },
+  {
+    slug: "local-seo-checklist-small-business",
+    title: "Local SEO checklist for small businesses (2026)",
+    titleTag: "Local SEO Checklist for Small Business (2026)",
+    metaDescription:
+      "A practical local SEO checklist for small businesses in 2026: Google Business Profile, reviews, NAP, local content and schema to rank in your area.",
+    excerpt:
+      "Want to show up when nearby customers search? This practical local SEO checklist covers the steps that actually move local rankings in 2026.",
+    category: "SEO",
+    date: "2026-05-30",
+    readingTime: 7,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "A map pin marking a local business surrounded by search result cards",
+    intro:
+      "Local SEO is how your business shows up when nearby customers search for what you offer. For most small businesses it is the highest-return marketing you can do. This checklist covers the steps that genuinely move local rankings in 2026.",
+    sections: [
+      {
+        id: "what-is-local-seo",
+        heading: "What is local SEO?",
+        blocks: [
+          {
+            type: "p",
+            text: "Local SEO optimises your online presence so you appear in local search results and Google Maps when people nearby search, for example 'web designer near me' or 'cafe in Parramatta'. It combines your Google Business Profile, your website and signals from across the web.",
+          },
+        ],
+      },
+      {
+        id: "checklist",
+        heading: "The local SEO checklist",
+        blocks: [
+          {
+            type: "ol",
+            items: [
+              "Claim and fully complete your Google Business Profile, with categories, hours, photos and services.",
+              "Keep your Name, Address and Phone number (NAP) identical everywhere online.",
+              "Earn genuine customer reviews and respond to them.",
+              "Create location-relevant pages and content for the areas you serve.",
+              "Add LocalBusiness structured data to your website.",
+              "List your business in reputable local and industry directories.",
+              "Make sure your site is fast and mobile-first.",
+              "Build local relevance with content about your area and community.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "gbp",
+        heading: "Your Google Business Profile is the foundation",
+        blocks: [
+          {
+            type: "quote",
+            text: "For local search, a complete, active Google Business Profile is the single biggest ranking factor you control.",
+          },
+          {
+            type: "p",
+            text: "Complete every field, add real photos, keep your hours accurate, post updates, and reply to reviews. An active profile signals to Google that your business is real, relevant and trustworthy.",
+          },
+        ],
+      },
+      {
+        id: "mistakes",
+        heading: "Common local SEO mistakes",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Inconsistent business name, address or phone number across listings.",
+              "Ignoring reviews, or worse, buying fake ones.",
+              "A slow website that frustrates mobile visitors.",
+              "No location pages for the areas you actually serve.",
+              "Thin or duplicate content across location pages.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Webnetic builds fast websites with proper local SEO and dedicated location pages, and prepares your site for AEO and GEO so you appear in AI answers too.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "SEO services", href: "/services/seo" },
+              { label: "Areas we serve", href: "/locations" },
+              { label: "AEO vs SEO explained", href: "/blog/aeo-vs-seo-what-is-the-difference" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do I rank higher on Google Maps?",
+        a: "Complete and actively manage your Google Business Profile, earn genuine reviews, keep your NAP consistent everywhere, and build local relevance with location pages and content. A fast, mobile-first website supports all of this.",
+      },
+      {
+        q: "How long does local SEO take?",
+        a: "Many businesses see movement within a few weeks of optimising their Google Business Profile and website, with stronger results over two to four months as reviews and local signals build.",
+      },
+      {
+        q: "Do I need a website for local SEO?",
+        a: "Yes. Your Google Business Profile and website work together. A fast website with location pages and LocalBusiness schema strengthens your profile and gives Google more reasons to rank you locally.",
+      },
+      {
+        q: "Can Webnetic help with local SEO in my area?",
+        a: "Yes. Webnetic builds local SEO into every site and creates dedicated location pages for suburbs across Sydney, so nearby customers find you on Google and in AI answers.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-get-cited-by-ai-search",
+    title: "How to get your business cited by ChatGPT and AI search",
+    titleTag: "How to Get Cited by ChatGPT & AI Search (2026)",
+    metaDescription:
+      "Want ChatGPT, Perplexity and Google AI Overviews to recommend your business? Here is how to get cited in AI answers with practical GEO steps for 2026.",
+    excerpt:
+      "More people ask AI instead of searching. Here is how to get your business cited and recommended inside ChatGPT, Perplexity and Google AI Overviews.",
+    category: "AI",
+    date: "2026-05-20",
+    readingTime: 7,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "A chat answer panel citing a business as a recommended source on a dark interface",
+    intro:
+      "More customers now ask ChatGPT, Perplexity, Gemini and Google AI Overviews instead of searching the traditional way. If those engines do not know or trust your business, they recommend a competitor. This guide explains how to get your business cited in AI answers, the practice known as Generative Engine Optimization (GEO).",
+    sections: [
+      {
+        id: "why-citations",
+        heading: "Why AI citations matter now",
+        blocks: [
+          {
+            type: "p",
+            text: "When an AI engine answers a question, it often names and links a few sources. Being one of those cited sources puts your brand in front of buyers at the exact moment of decision, frequently before they ever reach a traditional search results page.",
+          },
+        ],
+      },
+      {
+        id: "how-ai-chooses",
+        heading: "How AI engines choose who to cite",
+        blocks: [
+          {
+            type: "p",
+            text: "Generative engines favour sources that are clear, consistent, authoritative and easy to parse. In practice that means a recognisable brand entity, fact-dense content, strong structured data, and information that agrees with itself across your site and the wider web.",
+          },
+        ],
+      },
+      {
+        id: "steps",
+        heading: "How to get cited: a practical checklist",
+        blocks: [
+          {
+            type: "ol",
+            items: [
+              "Keep your brand name, description and key facts identical across your site and the web.",
+              "Add Organization, Service, LocalBusiness and FAQ structured data.",
+              "Write fact-dense, self-contained answers to the real questions people ask.",
+              "Build topical depth so you are the obvious source on your subject.",
+              "Allow AI crawlers such as GPTBot, PerplexityBot and Google-Extended in robots.txt.",
+              "Earn mentions and citations on reputable third-party sites.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "avoid",
+        heading: "What to avoid",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Vague, padded content with no concrete facts to quote.",
+              "Inconsistent business details that confuse the model about who you are.",
+              "Blocking AI crawlers, which removes you from the data engines learn from.",
+              "Thin pages with no structured data.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Webnetic builds GEO into every site, alongside SEO and AEO, so you rank on Google, win featured snippets and get cited in AI answers.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "GEO services", href: "/services/geo" },
+              { label: "AEO services", href: "/services/aeo" },
+              { label: "What is GEO and why it matters", href: "/blog/what-is-geo-and-why-it-matters-in-2026" },
+              { label: "Talk to us", href: "/contact" },
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do I get my business mentioned by ChatGPT?",
+        a: "Make your brand clear, consistent and authoritative: use the same name and facts everywhere, add structured data, publish fact-dense content that answers real questions, and allow AI crawlers. This is Generative Engine Optimization (GEO), and it is what makes engines confident enough to cite you.",
+      },
+      {
+        q: "Can I control what AI says about my business?",
+        a: "Not directly, but you strongly influence it. Models learn from clear, consistent, authoritative information across the web. The cleaner and more authoritative your presence, the more accurately and often AI engines describe and recommend you.",
+      },
+      {
+        q: "Is getting cited by AI different from SEO?",
+        a: "It overlaps but is distinct. SEO ranks a link on a results page; GEO gets your brand named and cited inside a synthesised AI answer. They share fundamentals, so they are best done together.",
+      },
+      {
+        q: "Should I block AI crawlers?",
+        a: "Generally no, if you want AI visibility. Blocking crawlers like GPTBot or Google-Extended removes you from the data these engines use, which means they are far less likely to cite you. We configure robots.txt to welcome them.",
+      },
+    ],
+  },
+  {
+    slug: "do-you-still-need-a-website-in-2026",
+    title: "Do you still need a website in 2026?",
+    titleTag: "Do You Still Need a Website in 2026? (Honest Answer)",
+    metaDescription:
+      "With social media and AI, do you still need a website in 2026? Yes, and here is why a website matters more than ever for trust, search and AI visibility.",
+    excerpt:
+      "With social media and AI everywhere, is a website still worth it? The honest answer is yes, and arguably more than ever. Here is why.",
+    category: "Business",
+    date: "2026-05-10",
+    readingTime: 5,
+    author: "Webnetic Digital Solutions",
+    heroAlt: "A smartphone showing a social profile beside a browser window with a business website",
+    intro:
+      "With social media, marketplaces and AI assistants everywhere, many business owners ask whether a website is still worth it. The honest answer is yes, and arguably more than ever. Here is why a website remains the foundation of your online presence in 2026.",
+    sections: [
+      {
+        id: "short-answer",
+        heading: "The short answer",
+        blocks: [
+          {
+            type: "p",
+            text: "Yes, you still need a website in 2026. It is the one online asset you own and control, the place that builds trust, ranks on Google, and increasingly the source that AI engines read to learn about and recommend your business.",
+          },
+        ],
+      },
+      {
+        id: "why",
+        heading: "Why a website still matters",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "You own it: unlike a social account, it cannot be suspended or change its rules overnight.",
+              "It builds trust: customers expect a real business to have a professional website.",
+              "It ranks: a website is how you appear on Google for what you offer.",
+              "It feeds AI: engines like ChatGPT and Google AI Overviews read websites to decide who to cite.",
+              "It converts: you control the journey from visitor to enquiry or sale.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "social-not-enough",
+        heading: "Why social media alone is not enough",
+        blocks: [
+          {
+            type: "p",
+            text: "Social media is excellent for reach and engagement, but you rent your presence there. Algorithms change, reach is throttled, and accounts can be restricted. Social media should drive people to a website you own, not replace it.",
+          },
+        ],
+      },
+      {
+        id: "modern-website",
+        heading: "What a modern website needs",
+        blocks: [
+          {
+            type: "p",
+            text: "A website that earns its place in 2026 is fast, mobile-first, easy to find on Google, structured for AI answer engines, and built to convert visitors into customers. Looks alone are not enough.",
+          },
+          {
+            type: "p",
+            text: "Webnetic builds exactly this kind of website for Sydney businesses, engineered for speed, search, AI visibility and conversion.",
+          },
+          {
+            type: "links",
+            items: [
+              { label: "Web development services", href: "/services/web-development" },
+              { label: "Affordable web development in Sydney", href: "/blog/affordable-web-development-sydney" },
+              { label: "See our work", href: "/work" },
+              { label: "Get a quote", href: "/contact" },
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I still need a website if I have social media?",
+        a: "Yes. Social media is rented reach that can change or disappear, while a website is an asset you own. Social should drive people to your website, where you build trust, rank on Google and control the path to a sale.",
+      },
+      {
+        q: "Is a website worth it for a small business?",
+        a: "For almost every small business, yes. A fast, well-built website is often the highest-return marketing investment you can make, working around the clock to generate trust and enquiries.",
+      },
+      {
+        q: "Will AI replace the need for websites?",
+        a: "The opposite is happening. AI engines read websites to decide which businesses to recommend, so a clear, authoritative website is now essential to be cited in AI answers as well as to rank on Google.",
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);

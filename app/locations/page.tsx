@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { LOCATIONS } from "@/lib/locations";
 import { pageMeta } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/Section";
+import { PageHero } from "@/components/PageHero";
 import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { Pin, ArrowRight } from "@/components/icons";
@@ -20,14 +20,12 @@ export default function LocationsHub() {
     <>
       <Breadcrumbs items={[{ name: "Locations", path: "/locations" }]} />
 
-      <section className="container-page mt-10">
-        <SectionHeading
-          as="h1"
-          eyebrow="Areas we serve"
-          title="Web design and development across Sydney"
-          intro="Webnetic Digital Solutions is a Sydney web and AI agency working with businesses across Western Sydney and the Inner West. We build fast, search-ready websites and the local SEO that helps nearby customers find you. Choose your area below, or get in touch wherever you are in Sydney."
-        />
-      </section>
+      <PageHero
+        image="/heroes/locations.jpg"
+        eyebrow="Areas we serve"
+        title="Web design and development across Sydney"
+        intro="Webnetic Digital Solutions is a Sydney web and AI agency working with businesses across Western Sydney and the Inner West. We build fast, search-ready websites and the local SEO that helps nearby customers find you. Choose your area below, or get in touch wherever you are in Sydney."
+      />
 
       <section className="container-page mt-16">
         <div className="grid gap-4 sm:grid-cols-2">

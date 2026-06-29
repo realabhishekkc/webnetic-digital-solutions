@@ -8,6 +8,7 @@ type PageMetaArgs = {
   ogTitle?: string;
   type?: "website" | "article";
   publishedTime?: string;
+  image?: string; // defaults to the site OG image
 };
 
 // Builds consistent, unique metadata (title, description, canonical, OG, Twitter) per page.
@@ -18,6 +19,7 @@ export function pageMeta({
   ogTitle,
   type = "website",
   publishedTime,
+  image = "/og.png",
 }: PageMetaArgs): Metadata {
   const url = `${SITE.url}${path === "/" ? "" : path}`;
   return {
@@ -33,13 +35,13 @@ export function pageMeta({
       locale: "en_AU",
       type,
       ...(publishedTime ? { publishedTime } : {}),
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE.name }],
+      images: [{ url: image, width: 1200, height: 630, alt: ogTitle || title }],
     },
     twitter: {
       card: "summary_large_image",
       title: ogTitle || title,
       description,
-      images: ["/og.png"],
+      images: [image],
     },
   };
 }

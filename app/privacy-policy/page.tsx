@@ -26,6 +26,7 @@ const sections: LegalSection[] = [
     list: [
       "Contact details you submit, such as your name, email address, company and message.",
       "Project information you choose to share when enquiring about our services.",
+      "Domain registration details, such as your name, address and contact information, when we purchase or register a domain on your behalf, as required by the domain registrar.",
       "Technical data such as your browser type, device and pages visited, where analytics are enabled.",
     ],
   },
@@ -42,7 +43,7 @@ const sections: LegalSection[] = [
   {
     heading: "4. Disclosure",
     paragraphs: [
-      "We do not sell your personal information. We may share it with trusted service providers who help us operate our business (for example, email and hosting providers), only as needed and under appropriate confidentiality obligations.",
+      "We do not sell your personal information. We may share it with trusted service providers who help us operate our business (for example email, hosting and domain registrars), only as needed and under appropriate confidentiality obligations. When we register a domain on your behalf, the details required by the registrar are provided to that registrar; the domain remains your property.",
     ],
   },
   {
@@ -54,7 +55,7 @@ const sections: LegalSection[] = [
   {
     heading: "6. Cookies and analytics",
     paragraphs: [
-      "Our website may use cookies and privacy-respecting analytics to understand how the site is used and to improve it. You can control cookies through your browser settings. Where analytics are enabled, we will display a consent notice.",
+      "Our website uses cookies and may use privacy-respecting analytics to keep the site working, remember your preferences and understand how it is used so we can improve it. In line with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles, we show a cookie notice so you can accept or decline non-essential cookies for your session. Essential cookies needed for the site to function may still be used. You can also control cookies through your browser settings.",
     ],
   },
   {
@@ -77,7 +78,7 @@ export default function PrivacyPage() {
       title="Privacy Policy"
       crumb="Privacy Policy"
       path="/privacy-policy"
-      updated="14 June 2026"
+      updated="16 June 2026"
       intro={`This Privacy Policy explains how ${SITE.name} collects, uses, discloses and protects your personal information when you visit our website or engage our services.`}
       sections={sections}
     />
