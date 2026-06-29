@@ -16,12 +16,20 @@ export async function GET() {
     return NextResponse.json({ error: "Not available in production." }, { status: 403 });
   }
 
+  const pass = process.env.SMTP_PASS ?? "";
   const vars = {
     SMTP_HOST: process.env.SMTP_HOST,
     SMTP_PORT: process.env.SMTP_PORT,
     SMTP_SECURE: process.env.SMTP_SECURE,
     SMTP_USER: process.env.SMTP_USER,
-    SMTP_PASS: process.env.SMTP_PASS ? "✓ set" : "✗ MISSING",
+    // Length + first/last char let you confirm .env.local parsed the password
+    // intact (special chars/quotes/spaces are the usual silent corrupters).
+    // Dev-only endpoint (403 in prod) so this never leaks publicly.
+    SMTP_PASS: pass
+      ? `✓ set · length=${pass.length} · starts="${pass[0]}" ends="${pass[pass.length - 1]}"`
+      : "✗ MISSING",
+    SMTP_PASS_has_surrounding_quotes: pass.startsWith('"') || pass.startsWith("'"),
+    SMTP_PASS_has_trailing_space: pass !== pass.trimEnd(),
     CONTACT_EMAIL: process.env.CONTACT_EMAIL,
   };
 
