@@ -207,6 +207,14 @@ export function Mail(p: IconProps) {
     </svg>
   );
 }
+export function Phone(p: IconProps) {
+  const { size, ...rest } = p;
+  return (
+    <svg {...base(size)} {...rest}>
+      <path d="M5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4Z" />
+    </svg>
+  );
+}
 export function Pin(p: IconProps) {
   const { size, ...rest } = p;
   return (

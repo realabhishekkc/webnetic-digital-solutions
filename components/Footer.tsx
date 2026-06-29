@@ -3,7 +3,7 @@ import { SITE, SOCIALS, mailtoQuote } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 import { PROJECTS } from "@/lib/projects";
 import { LOCATIONS } from "@/lib/locations";
-import { BulbBrain, LinkedIn, XLogo, GitHub, Mail, Pin } from "./icons";
+import { BulbBrain, LinkedIn, XLogo, GitHub, Mail, Pin, Phone } from "./icons";
 
 const socialIcon = (label: string) =>
   label === "LinkedIn" ? LinkedIn : label === "X" ? XLogo : GitHub;
@@ -34,8 +34,11 @@ export function Footer() {
             <a href={`mailto:${SITE.email}`} className="link-muted inline-flex items-center gap-2">
               <Mail size={16} className="text-brand" /> {SITE.email}
             </a>
-            <span className="inline-flex items-center gap-2 text-ink-muted">
-              <Pin size={16} className="text-brand" /> {SITE.locality}, {SITE.country}
+            <a href={`tel:${SITE.phoneE164}`} className="link-muted inline-flex items-center gap-2">
+              <Phone size={16} className="text-brand" /> {SITE.phone}
+            </a>
+            <span className="inline-flex items-start gap-2 text-ink-muted">
+              <Pin size={16} className="mt-0.5 shrink-0 text-brand" /> {SITE.street}, {SITE.addressLocality} {SITE.region} {SITE.postcode}
             </span>
           </div>
           <div className="mt-6 flex gap-2">

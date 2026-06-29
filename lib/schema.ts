@@ -6,6 +6,16 @@ import type { Post } from "./posts";
 const LOGO = `${SITE.url}/icon.svg`;
 const OG = `${SITE.url}/og.png`;
 
+// Full postal address (NAP) — kept consistent across every schema for local SEO.
+const POSTAL_ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: SITE.street,
+  addressLocality: SITE.addressLocality,
+  addressRegion: SITE.region,
+  postalCode: SITE.postcode,
+  addressCountry: SITE.countryCode,
+} as const;
+
 export const organizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -17,18 +27,15 @@ export const organizationSchema = () => ({
   image: OG,
   description: SITE.description,
   email: SITE.email,
+  telephone: SITE.phoneE164,
   foundingDate: SITE.founded,
   sameAs: SAME_AS,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: SITE.locality,
-    addressRegion: SITE.region,
-    addressCountry: SITE.countryCode,
-  },
+  address: POSTAL_ADDRESS,
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: SITE.email,
+    telephone: SITE.phoneE164,
     areaServed: "AU",
     availableLanguage: ["en"],
   },
@@ -53,13 +60,14 @@ export const localBusinessSchema = () => ({
   image: OG,
   url: SITE.url,
   email: SITE.email,
+  telephone: SITE.phoneE164,
   priceRange: "$$",
   areaServed: { "@type": "City", name: "Sydney" },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: SITE.locality,
-    addressRegion: SITE.region,
-    addressCountry: SITE.countryCode,
+  address: POSTAL_ADDRESS,
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: SITE.geo.lat,
+    longitude: SITE.geo.lng,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",

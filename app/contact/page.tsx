@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
 import { localBusinessSchema } from "@/lib/schema";
-import { Mail, Pin, Clock } from "@/components/icons";
+import { Mail, Pin, Clock, Phone } from "@/components/icons";
 
 export const metadata: Metadata = pageMeta({
   title: "Contact Webnetic | Web & AI Agency in Sydney",
@@ -36,8 +36,12 @@ export default function ContactPage() {
               <a href={`mailto:${SITE.email}`} className="text-brand-bright">{SITE.email}</a>
               <p className="mt-1 text-sm text-ink-muted">The fastest way to reach us.</p>
             </DetailCard>
-            <DetailCard icon={Pin} title="Location">
-              <p className="text-ink">{SITE.locality}, {SITE.country}</p>
+            <DetailCard icon={Phone} title="Call us">
+              <a href={`tel:${SITE.phoneE164}`} className="text-brand-bright">{SITE.phone}</a>
+              <p className="mt-1 text-sm text-ink-muted">{SITE.hours}</p>
+            </DetailCard>
+            <DetailCard icon={Pin} title="Visit us">
+              <p className="text-ink">{SITE.street}, {SITE.addressLocality} {SITE.region} {SITE.postcode}</p>
               <p className="mt-1 text-sm text-ink-muted">
                 Working with clients across Australia and remotely worldwide.
               </p>
