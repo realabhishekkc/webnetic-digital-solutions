@@ -20,8 +20,9 @@ export function generateStaticParams() {
   return locationSlugs.map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const loc = getLocation(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const loc = getLocation(slug);
   if (!loc) return {};
   return pageMeta({
     title: `Web Design ${loc.name} | Websites, SEO & AI — Webnetic`,
@@ -37,8 +38,9 @@ const INCLUDED = [
   { icon: Flow, title: "AI & automation", detail: "Chatbots and automations that capture and follow up enquiries while you work." },
 ];
 
-export default function LocationPage({ params }: { params: { slug: string } }) {
-  const loc = getLocation(params.slug);
+export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const loc = getLocation(slug);
   if (!loc) notFound();
 
   const post = loc.blogSlug ? getPost(loc.blogSlug) : null;

@@ -20,8 +20,9 @@ export function generateStaticParams() {
   return serviceSlugs.map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const s = getService(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const s = getService(slug);
   if (!s) return {};
   return pageMeta({
     title: s.titleTag,
@@ -31,8 +32,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   });
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const s = getService(params.slug);
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const s = getService(slug);
   if (!s) notFound();
 
   const Icon = SERVICE_ICONS[s.icon];
