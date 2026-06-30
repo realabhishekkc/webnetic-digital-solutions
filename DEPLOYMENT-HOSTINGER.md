@@ -59,8 +59,29 @@ Use either:
   Make sure files land *in* the root, not in a nested `standalone/` subfolder.
 - **Git:** if you prefer pulling on the server, see section F.
 
+> ⚠️ **Upload the hidden `.next` folder too.** `.next` starts with a dot, so many
+> FTP clients and File Managers hide and silently skip it. Always **zip
+> `.next/standalone` and upload the single zip, then Extract on the server** —
+> that preserves the hidden `.next/` folder. After extracting, enable "show
+> hidden files" and confirm `.next/static/css/` contains a `.css` file.
+
 > Do **not** run "Run NPM Install" in the panel — the standalone build already
 > bundles its dependencies. Running install is unnecessary and can be skipped.
+
+### Troubleshooting: site loads as unstyled raw HTML
+
+If the page text appears with no CSS/layout, the `/_next/static/*` assets are
+404ing. Causes, in order of likelihood:
+
+1. **The hidden `.next/static` folder didn't upload.** Re-upload via zip + Extract
+   (see warning above) and verify `.next/static/css/*.css` exists on the server.
+2. **Passenger serves from the `public/` document root and doesn't forward
+   `/_next/*` to Node.** This build mirrors the assets to `public/_next/static`
+   to cover that case, so a fresh `npm run build` + re-upload fixes it.
+3. **Stale app** — click **Restart** on the Node.js app after re-uploading.
+
+Confirm the fix in the browser: DevTools → Network → reload → the `.css` request
+should be `200` with type `text/css` (not `404`).
 
 ---
 

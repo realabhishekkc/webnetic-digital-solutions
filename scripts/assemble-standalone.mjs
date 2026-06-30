@@ -31,10 +31,19 @@ if (existsSync(publicDir)) {
 }
 
 // 2 · .next/static/  ->  .next/standalone/.next/static/
+//     (served by the Node server itself)
 const staticDir = join(root, ".next", "static");
 if (existsSync(staticDir)) {
   cpSync(staticDir, join(standalone, ".next", "static"), { recursive: true });
   console.log("[assemble-standalone] copied .next/static/ -> .next/standalone/.next/static/");
+
+  // 2b · ALSO mirror to public/_next/static so the static assets are reachable
+  //      even when the web server (e.g. Hostinger Passenger) serves files
+  //      directly from the public/ document root and only forwards misses to
+  //      Node. Without this, /_next/static/*.css can 404 and the site renders
+  //      as unstyled raw HTML.
+  cpSync(staticDir, join(standalone, "public", "_next", "static"), { recursive: true });
+  console.log("[assemble-standalone] mirrored static -> .next/standalone/public/_next/static/");
 }
 
 console.log("[assemble-standalone] Done. Upload the .next/standalone/ folder to your Node.js app.");
